@@ -1,0 +1,49 @@
+---
+title: "Hayek to Mises to de Finetti"
+format: pdf
+---
+
+**Premise**
+
+The goal of this paper is to operationalize Austrian microfoundations. By Austrian microfoundations, we are referring to theories of how individual choice and behavior based on subjective beliefs, economic calculation, and learning result in emergent market order and coordination. These foundations build on the works of Friedrich Hayek, Ludwig von Mises, Israel Kirzner, and James Buchanan, among others. By operationalize, we mean supplying these theories with the numerical toolkits they need in order to be predictive.  
+
+**Knowledge problems and Economic Calculation**
+
+A good entry point for motivating this topic is Hayek’s knowledge problem as discussed in Hayek 1937. This paper asks why people’s expectations for future events should ever align with what actually happens - how do people learn and update their beliefs such that their personal plans are coherent with reality, and how does that information get communicated to others? Why do we observe market order and coordination?
+
+Classic equilibrium analysis fails to explain where market order comes from - it makes all of its agents omniscent and assumes away the knowledge problem. Hayek (1945) says that agents have local, tacit knowledge, and prices act as a coordinating mechanism - no one person needs to know everything everyone else knows because the information they need is incorporated into price information. In the way prices act as a surrogate for knowledge. But how are prices formed? Equilibrium theory gives us a snapshot of what the economy looks like when all outputs and inputs are stable, or at least change in predictable ways, and all agents are omniscient and their plans all compatible. Here equilibrium means that every individual's plans are made and enacted with the correct expectations of what the others are going to do - you know other people’s expectations and plans and make your plan accordingly. Other people’s decisions are your data; your decisions are their data. The price of goods at this equilibrium point is the price at which things are valued when everyone’s plans are compatible. Studying the economy through this lens tells us nothing about how prices form and how people learn - in short, why the economy ever trends towards an equilibrium state at all.
+
+In order to talk about economic behavior on the individual level, an agent’s plans can be conceived as their own resource allocation problem (note that we are not talking about the entire economy’s resource allocation problem - we’re leaving the allocation of resources to the individual). A given individual faces resource constraints unique to them. They imagine possibilities and make calculations in order to enact plans to maximize their personal welfare. The entrepreneur (or any agent) must  imagine different futures, experiment based on expectations about what’s going to happen, note the outcome, and update their expectations accordingly. This kind of economic calculation is the beginning of explaining how spontaneous order arises from the intentional actions of agents based on subjective information. The way agents engage in economic calculation is determined by the numerical toolkits they use.
+
+**Social Ontology of Number**
+
+The social ontology of number sequences refers to the fact that human social interaction, especially in a market-exchange context, affects and is affected by number sequences. For people to make calculations, prices and money must exist. In any economic theory of calculation, prices, or money, we assume numeracy. In any economic theory, we assume numeracy. Numerical toolkits refer to number sequences and the material institutions that go along with them, the physical artifacts we compute with: the clay tablets we write on, the excel sheets we account in, the dollar bills we use to represent money and value. Social groups adopt numerical toolkits and adpat them to their needs. They also adapt their thinking to the structure of the toolkits. The tools we inherit change the way we think about and interact with the world - accounting systems, prices, time, etc. change how we think. This implies that the way we engage in economic calculation is going to be determined by the numerical toolkits we have available - we can do more complicated calculations and have more accurate foresight if we have better computational tools. Agents’ beliefs can be better calibrated to reality if their computational process is better.
+
+Numerical toolkits are fundamentally social - so are prices. It’s through voluntary exchange in a market setting that subjective expectations get incorporated into prices, transforming them into surrogates for knowledge and coordinating mechanisms.
+
+cite Harper 2010
+
+**Enter subjective probability**
+
+>"But, as I have already indicated at the beginning,price expectations and even the knowledge of current prices are only a very small section of the problem of knowledge as I see it. The wider aspect of the problem of knowledge with which I am concerned is the knowledge of the basic fact of how the different commodities can be obtained and used, and under what conditions they are actually obtained and used, that is, the general question of why the subjective data to the different persons correspond to the objective facts." - Hayek 19
+
+The social ontology of number sequences refers to the fact that human social interaction, especially in a market-exchange context, affects and is affected by number sequences. For people to make calculations, prices and money must exist. In any economic theory of calculation, prices, or money, we assume numeracy. In any economic theory, we assume numeracy. Numerical toolkits refer to number sequences and the material institutions that go along with them, the physical artifacts we compute with: the clay tablets we write on, the excel sheets we account in, the dollar bills we use to represent money and value. Social groups adopt numerical toolkits and adpat them to their needs. They also adapt their thinking to the structure of the toolkits. The tools we inherit change the way we think about and interact with the world - accounting systems, prices, time, etc. change how we think. This implies that the way we engage in economic calculation is going to be determined by the numerical toolkits we have available - we can do more complicated calculations and have more accurate foresight if we have better computational tools. Agents’ beliefs can be better calibrated to reality if their computational process is better.
+
+Numerical toolkits are fundamentally social - so are prices. It’s through voluntary exchange in a market setting that subjective expectations get incorporated into prices, transforming them into surrogates for knowledge and coordinating mechanisms.
+
+cite Harper 2010
+
+**Operationalizing Subjective Probability**
+
+Talking about how these subjective probabilities are measured will help make the connection between subjective beliefs and prices more explicit. Lad has an operational method for specifying your probability or prevision for an event. This prevision is defined as a measurement of your knowledge of an event, and your uncertainty about its future occurrence. It's best explained by example. The example statistician Frank Lad gives is the artificial insemination of cows; 50 cows are artificially inseminated, and you want to measure your subjective belief of how many will actually give birth to a calf. You specify a maximum stake sufficiently divisible for measuring your expectations, but not so big as to affect your life; we’ll call it $100. Let’s call the number of calves born X. Your prevision for event A, let’s call it P(A), is the amount of money at which you would be indifferent to receiving either $P(A) or $X. Note that $P(A) is a for-sure, fixed amount, where $X depends on how many calves are born. For example, if you’d rather recieve $X to $5, $X to $35, $50 to $X, but are indifferent between $41 and $X, then your prevision is $41. Probability is a prevision but between [0,1], and where the event A can take on a value of 0 or 1. For example, the event A = {X=41} can take on a value of 0 or 1, and your probability that A = 1 is the amount at which you would be indifferent between receiving the amount for sure or the $A (so $1 if it occurs and $0 if it doesn’t).
+
+All possible outcomes for an event is called a “realm” using Lad’s terminology, and can be thought of as discrete outcome spaces that correspond to quantities measured as the result of an a priori defined measuring procedure. This relates to Harper’s number sequences by situating numbers in a social, human context where what we can do with them is limited by our measuring capabilities and operational procedures. Others have to accept our methods in order for our science to communicate anything of value to them. They also have to be somewhat standardized. The numerical toolkits used in science are adapted to the needs of the scientist, but the scientist’s way of thinking also adapts to the numerical toolkit - think of the way prevision-probability was introduced. This operational way of describing uncertain beliefs is different from the frequentist presentation of probability, and has a different way to measure it. It maps epistemic beliefs to ontological prices. This is key to understanding how individual expectations get incorporated into prices and communicated to others.
+
+
+
+
+
+
+
+
+
