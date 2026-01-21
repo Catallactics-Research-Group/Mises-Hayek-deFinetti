@@ -1,0 +1,65 @@
+---
+title: Bayesians in the Catallaxy Outline
+date: 1-20-2026
+---
+
+(transcribed from 1/16/26 meeting)
+
+1. Introduction
+
+    - intellectual arbitrage
+    - define arbitrage, using the definition of Mises (or from previous Tyler paper where he defines it?)
+
+2. Arbitrage Triangle
+
+    - Arbitrage foundations of catallactic 
+        - knowledge problem
+        - Hayek
+        - Harper (maybe?)
+
+    - Arbitrage foundations of BdF 
+        - dutch book -> define a probability by “the dutch book” the correct probability is the no-arbitrage value
+        - At the end of the day, each person acts rationally according to their own internal “subjective probability”
+        - Each person is acting, rationally, according to their own probability function and they adhere to the three axioms
+        - We show our values through our interactions with price and money systems
+
+        **Notes:**
+
+        Exchangability? What role does it play?
+    - Arbitrage foundations of finance
+        - No-arbitrage in a perfect market system (equilibrium state) and this is how we pick our “rational prices” 
+        - Convergence to equilibrium (convergence to no-arbitrage setting) very quickly, and so most of the papers are about the no-arbitrage condition
+        - How does this happen through the pricing mechanism (make this formal using probability)
+
+3. deFinetti as a catallactic: 
+
+    **Goal:** prove that there is an Austrian interpretation of BdF that is powerful
+    - Case and class (frequentism) probability (separate axioms? They aren’t equal?)
+    - You can assign probabilities to things that can’t be repeated infinitely often
+    - deFinetti chooses case (bayesian here?) 
+    - deFinetti defines probability in exactly the same ways as the Austrians? He defines probability using social interaction, and therefore the fact that the economy is a social system is inherently built in
+    - Weather expectations in orange juice prices problem? Somewhere in here? 
+    - He talks about price (apparently?)
+    - Also lad? Possibly?
+
+4. BdF to finance: 
+
+    - Mengerian view of price?
+    - How does price result in coordination? What is actually the mechanism?
+    - Distribution of market, transformation of measure to “risk-neutral” setting through radon-nikodym derivative? Question: why do we assume it absolutely continuous? Is there some justification for this? 
+    - Fundamental theorem of provision = fundamental theorem of asset pricing
+    - Can rebuild the foundation of finance using these ideas? 
+
+5. Real Option
+
+6. Computational statistical catallactics
+
+    **OR:** how the evaluation game follows from these ideas
+
+    - Agent-based computational economics 
+
+    **Notes:**
+    - This is where the hydrodynamic limit start to come into play
+    - Agent for the marketplace (subjective probability distribution)
+
+7. Conclusion
