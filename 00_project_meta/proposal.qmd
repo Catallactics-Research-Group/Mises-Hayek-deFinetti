@@ -1,0 +1,119 @@
+---
+title: "Bayesians in the Catallaxy"
+subtitle: "A Research Proposal"
+citeproc: true 
+bibliography: biblio.bib
+format: pdf
+number-sections: true
+abstract: This paper is about ***arbitrage trinitarianism***.
+---
+
+\vspace{5cm}
+
+---
+
+\vspace{5cm}
+
+> *There has been a tremendous neglect of the notion of ... emergent choice; that we don't really have before us objects among which to choose. We create them in the act of choice...* ***Arbitrage really has not become central to economics like it should be.*** -- James M. Buchanan
+
+\newpage
+
+# Introduction: Triangular Arbitrage
+
+> ***Economics is about arbitrage.*** *The behavioral paradigm central to economics is that of the trader whose Smithean propensity to truck and barter locates and creates opportunities for mutual gains. This paradigm is contrasted with that of the maximizing engineer who allocates scarce resources among alternatives.... the maximizing paradigm is the fatal methodological flaw in modern economics.* -- James M. Buchanan
+
+This paper is scientific triangular arbitrage. It is also fundamentally about arbitrage. We agree with Buchanan that arbitrage has not become central to economics as it should be. 
+
+
+# Arbitrage Trinitarianism
+
+## Arbitrage Foundations of Catallactics 
+
+> ***Economics involves actors.*** *Without actors, there is no play. This truism has been overlooked by modern economists whose universe is peopled with passive responders to stimuli. If all are price-takers, who sets price? If all behavior is rationally responsive, how can change occur? How can entrepreneurship be modeled? Increasingly, I have come to the view that the role of entrepreneurship has been the most neglected area of economic inquiry, with significant normative implications for the general understanding of how the whole economy works.* -- James M. Buchanan 
+
+
+Fundamental papers and chapters: 
+
+* @HayekEconomica1937
+* @HayekAER1945
+* @Hayek1978b
+* @BuchananSEJ1964
+
+
+## Arbitrage Foundations of de Finetti's Operational Subjective Probability Theory
+
+> *Some 15 billion years ago,as best we can tell, we were a dense mass of exploding gases. Today we are as we find ourselves, evolved into our present state of partially-informed being and knowing, but uncertain precisely about all we have been, and uncertain about what we will become. One thing we can be sure of is that there has been no repeatability of stable conditions that provides a real base for "the primitive notion of probability" as something outside of ourselves.* ***Probability is nothing other than the logic of our uncertain judgements about the world.*** -- Frank Lad
+
+- See @NauTD2001 and @Nau1999
+- See @NauMcCardleTD1991
+- See @Nau2023
+- See @SchervishSeidenfeldKadaneIJAR2008
+- See @Pressacco2009 and @PressaccoZiani2010
+
+- See @HajekBJPS2008
+    - Hajek proposes the "Czech Book Theorem" which rescues the Dutch Book Theorem. 
+    - The Misesian entrepreneur can accept fair or favorable bets. 
+    - This is needed for the market-maker
+
+
+
+## Arbitrage Foundations of Modern Finance 
+
+> *[W]hen judged by its ability to explain the empirical data, option pricing theory is the most successful theory not only in finance, but in all of economics. It is now widely employed by the financial industry and its impact on economics has been far-ranging. At a theoretical level, we now understand that option pricing theory is a manifestation of the force of arbitrage and that this is the same force that underlies much of neoclassical finance.* -- Stephen A. Ross
+
+- @Friedman1953 and Fama JB 1965
+- The Fundamental Theorem of Asset Pricing 
+- Steve Ross on arbitrage intuition and no-arbitrage theory
+- Market microstructure 
+    - It's equilibrium turtles all the way down. 
+- See NA (circular logic)
+
+
+# Bruno de Finetti: The Forgotten Austrian Catallactist
+
+> *It was economic calculation that assigned to measurement, number, and reckoning the role they play in our quantitative and computing civilization.* -- Ludwig von Mises
+
+- The fundamental claim of this section is that Bruno de Finetti's operational subjective derivation of probability is a ***catallactic theory***.
+    - He relies upon money prices to elicit subjective probabilities. 
+    - He agrees wholeheartedly with Mises about prices as "an aid to the mind"
+    - Compare and contrast the Walrasian vs. the Mengerian view of price. See @Horwitz2000 Chapter 1.
+    - Though he studies under Vilfredo Pareto, it is abundantly clear that his view of price is the subjective Mengerian one!
+
+- @HarperJIE2010 establishes the "social ontology" of numerical toolkits for Misesian economic calculation.
+    - Numbers are economic capital / economic institutions.
+    - "Even institutional, evolutionary, and Austrian economists tend to take numbers for granted. They do not examine how number sequences come into existence in an economic sense as a result of the social division of labor, economic specialization, and economic exchange. They pay little, if any, attention to the socially recognized systems of numerical symbolization that are used to represent exchange ratios or money prices." (see p. 168).
+
+- Bridge from @HarperJIE2010 to @Lad1996 (Chapter 2-4).
+
+- The DBT relates to Misesian economic calculation (praxeology)
+- Exchangeability relates to Hayekian knowledge-and-coordination problems
+- Mises-Hayek provide the price-theoretic microfoundations for de Finetti
+
+- There is a small cottage industry in trying to convince Austrians to adopt a probability theory.
+    - They are allergic to it. For example, see @CaplanSEJ1999
+    - Our claim is stronger:
+        - It isn't just that de Finetti's probabilism is compatible with Austrian subjectivism (a nice fit)
+        - Austrians are compelled to accept de Finetti by their own price-theoretic microfoundations.
+        - De Finetti's derivation of subjective probability **is Misesian economic calculation**
+        - Austrians face a Dutch book: accept their own price theory and accept de Finetti OR reject de Finetti and reject their own foundations.
+
+
+# The Catallactic Foundations of Financial Markets
+
+
+# The Real Options Theory of Entrepreneurship 
+
+
+# Computational Statistical Catallactics
+
+
+# Summary and Conclusions
+
+
+\newpage
+
+# References 
+
+
+
+

@@ -1,0 +1,59 @@
+---
+title: "From Mises to de Finetti: The Austrian Entrepreneur Becomes a Bayesian in the Catallaxy"
+---
+
+# Prologue
+
+This is a living document to propose an outline for the eventual article. 
+
+Below is my first attempt at a suggested outline. Please ask questions present concerns!
+
+# Introduction
+
+What is this all about anyway?! 
+
+
+# From Harper to Mises 
+
+- Harper establishes the implied numerical foundations of catallactics (i.e. Austrian price theory)
+- Numerical toolkits are economic capital
+- They have an "economic ontology" (side step the definition debate in mathematics)
+- They are the foundations of Misesian economic calculation made explicit (everyone takes this for granted)
+- Following Boettke, Horwitz et al we take a unified Mises-Hayek view of Austrian foundations
+- Kirzern: Misesian economic calculation is arbitrage profit calculation
+
+# From Harper and Mises-Hayek to de Finetti 
+
+- We will follow Lad in his derivation of de Finetti's operational subjective probability
+- Formally establish the foundational link between Harper's numerical toolkits and Lad's "realms" (sets by another name) to de Finetti's "prevision"
+- Lad fastidiously avoids any and all frequentist/objectivist language and vocabularly. Austrians should appreciate how dedicated they (Lad/de Finetti) to the same subjective foundations as Mises-Hayek-Kirzern-Shackle-Lachmann-Buchanan are! 
+- The economic foundations implied by de Finetti's "economic" derivation of subjective probability CANNOT be Walrasian. They have to be Mengerian (Austrian price theory and catallactics)
+- Austrians simply cannot reject de Finetti without rejecting their own price theoretic foundations. 
+- There is and has always been a uniquely Austrian version of probability. Remarkably it is de Finetti's. They're not just compatible. They are one and the same!!!
+- Austrians face a Dutch Book: accept de Finetti on purely Austrian grounds or reject your very own foundations! Pure and simple. 
+
+
+# Financial Foundations 
+
+- Remarkably de Finetti's Fundamental Theorem of Prevision is identical to the Fundamental Theorem of Asset Pricing (the very foundation of modern finance)
+- De Finetti's theory (the so-called Dutch book theorem) is a no-arbitrage theory that applies to the individual agent. The FTAP is a no-arbitrage theory that applies at the market level. 
+- Once we see this we see quite clearly that there is an implied Hayekian knowledge-and-coordination problem in going from FTP to FTAP. 
+- Ross on the "intuition" (read: arbitrage) vs the "theory" of finance (no-arbitrage)
+- No-arbitrage rests upon frequentist/objectivist (Walrasian) probability theory that everyone has taken as Kolmogorvian (measure theoretic)
+- We show that it really rests upon de Finetti but that there is an unsolved coordination problem.
+- If the reader buys our linking of Mises-Hayek to de Finetti what we see is that the proper financial market microstructure is catallactics! 
+- Discuss microstructure models that build instead upon noisy rational expectations and Bayesian Nash equilibrium (which have been mistakenly founded upon Hayek 1945 by neoclassicals)
+- Lewin-Cachonosky identify that "finance is economic calculation in practice"
+- Ross et al identify real options as the canonical view of finance
+- We establish the deep financial foundations of catallactics once the reader comes with us regarding Mises-Hayel-deFinetti. 
+- Exchangeable search is the next step, which we will develop in follow-up projects
+- NB: Franklin Fisher (no Austrian economist!) worried about these same exact issues from a fully Walrasian perspective. He wrote about the need for equilibrium awareness on the part of the agents in disequilibrium. We now know that this is Misesian-Hayekian-de Finettian real options arbitrage (and search theory!)
+- NB: There is a joint Austrian/de Finettian critique of RE and HD here to make that sounds much more powerful in Stereo! 
+
+
+# Summary and Conclusions
+
+All your base are belong to us! 
+
+- See here: https://en.wikipedia.org/wiki/All_your_base_are_belong_to_us
+

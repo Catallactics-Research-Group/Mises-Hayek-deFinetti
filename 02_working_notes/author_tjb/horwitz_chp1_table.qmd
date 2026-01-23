@@ -1,0 +1,19 @@
+---
+title: "Walrasian vs. Mengerian Views of Prices"
+author: "Summary of Chapter 1: Microfoundations and Macroeconomics"
+format: html
+---
+
+## Comparative Analysis: Walrasian vs. Mengerian Perspectives
+
+Based on Steven Horwitz's discussion in Chapter 1, the following table contrasts the mainstream Walrasian (neoclassical) approach with the Mengerian (Austrian) market process approach.
+
+| Feature | Walrasian View (Functional/Equilibrium) | Mengerian View (Genetic-Causal/Process) |
+| :--- | :--- | :--- |
+| **Theoretical Goal** | **Functional Theories:** Focuses on determining the conditions of equilibrium and the correspondence between existing prices[cite: 108]. | **Genetic-Causal Theories:** Focuses on explaining the *genesis* or formation of prices and the laws of their origin[cite: 108]. |
+| **Mathematical Structure** | **Simultaneous Equations:** Binds non-simultaneous magnitudes together as if they exist at the same time[cite: 112]. | **Dynamic Process:** Views the market as a process of learning and "becoming" that takes place in real time[cite: 55, 113]. |
+| **Nature of Prices** | **Parametric:** Prices are treated as independent variables ("inputs") given to the actor[cite: 70, 330]. | **Endogenous:** Prices are the outcome of subjective human choices and market interactions[cite: 332]. |
+| **Knowledge Assumptions** | **Perfect Knowledge:** Often assumes actors have perfect knowledge or that prices are "sufficient statistics" containing all necessary info[cite: 61, 263]. | **Sheer Ignorance:** Assumes actors have fragmentary knowledge; prices act as imperfect "knowledge surrogates"[cite: 61, 275]. |
+| **Role of Error** | **Error-Free:** In equilibrium, plans dovetail perfectly; implies no error exists in the prices[cite: 65, 146]. | **Embedded Error:** Prices are disequilibrium phenomena that embody the errors and expectations of previous actors[cite: 63, 68]. |
+| **Informational Functions** | **Ex Ante Only:** Prices serve primarily as "choice-influencing" inputs for utility maximization before action is taken[cite: 331, 335]. | **Tripartite Role:** Prices serve **Ex Ante** (calculation), **Ex Post** (feedback on success/failure), and **Discovery** (signaling profit opportunities) functions[cite: 298, 302, 308]. |
+| **Market Evolution** | **Static State:** Describes a state of rest where the problem of calculation is already solved[cite: 114, 378]. | **Evolutionary:** Markets evolve from isolated exchange (bilateral monopoly) toward bilateral competition, narrowing the price range[cite: 75, 76, 78]. |
