@@ -1,0 +1,29 @@
+Based on Chapter 2 of *Mind, Society, and Human Action*, Richard Wagner distinguishes between praxeology and catallaxy (or catallactics) by separating the logic of individual action from the complex phenomena of social interaction.
+
+### **1. Praxeology**
+
+In this text, Wagner defines **praxeology** as the domain of isolated individual action. It focuses on the logic of how individuals seek to improve their situation.
+
+* **Definition:** Praxeology is the idea that "individuals act to remove uneasiness by forming plans to secure what they anticipate will be more desired states of being".
+* **Nature:** It is described as an "exact" science, meaning it is a "pure logic of choice" that is not subject to empirical disconfirmation. It rests on the analytical proposition that people seek to act effectively rather than ineffectively.
+* **Scope:** It corresponds to "micro" theorizing and is illustrated by the isolated figure of Robinson Crusoe, who makes plans (like building a boat or finding food) without interacting with others.
+
+### **2. Catallaxy (or Catallactics)**
+
+Wagner defines **catallaxy** as the realm of social interaction where individual plans intersect.
+
+* **Definition:** Catallaxy denotes "exchange, but more generally it denotes all phenomena of interaction among acting agents". It covers how people live together in proximity, involving both cooperation and conflict.
+* **Nature:** Unlike praxeology, catallaxy is "contingent and empirical and not exact". It resides in the realm of history and complex phenomena.
+* **Scope:** It corresponds to "macro" theorizing, which Wagner defines as the study of "interaction among choosers" rather than simple aggregation. It includes phenomena that Crusoe would never face alone, such as prices, contracts, disputes, and taxes.
+
+### **Summary of Differences**
+
+| Feature | **Praxeology** | **Catallaxy** |
+| --- | --- | --- |
+| **Focus** | Individual action and planning | Social interaction and exchange |
+| **Methodology** | "Exact" (Pure logic of choice) | "Empirical-realistic" (Contingent/Historical) |
+| **Economic Level** | Micro (Choice) | Macro (Interaction) |
+| **Key Figure** | Robinson Crusoe (Isolated) | Society (Multiple Crusoes) |
+
+Wagner emphasizes that while praxeology deals with the logical connection between means and ends, the most interesting problems for social-economic theory arise within the catallactical setting, where social configurations emerge that are not the product of any single individual's choice.
+

@@ -67,6 +67,7 @@ Fundamental papers and chapters:
 - Market microstructure 
     - It's equilibrium turtles all the way down. 
 - See NA (circular logic)
+- @FiglewskiJFM2017
 
 
 # Bruno de Finetti: The Forgotten Austrian Catallactist
@@ -100,15 +101,37 @@ Fundamental papers and chapters:
 
 # The Catallactic Foundations of Financial Markets
 
+> *An understanding and appreciation of the principle of spontaneous order or coordination may emerge from the very citadels of objectivisim, and often does.* -- James M. Buchanan
+
+
+- Mises-Hayek-de Finetti attack on microfoundations of financial markets 
+- See @DeFelicePelloni1987 for how de Finetti's probabilism challenges rational expectations
+- Remarkably at the heart of the most predictive theory in all of economics (per Steve Ross: options theory) there is a core catallactic interpretation
+    - This is the options market-maker as entrepreneur/arbitrageur
+    - See @FiglewskiJF1989
+- Incredibly, de Finetti's **Fundamental Theorem of Prevision** (FTP) is identical to the **Fundamental Theorem of Asset Pricing** (FTAP) from modern finance theory.
+    - See @NauTD2001, @Nau2023
+    - See @Ross1989
+- Given that de Finetti's FTP applies at the subjective level of the agent and the FTAP applies at the market level there is an implied solution of a Hayekian knowledge-and-coordination problem. How?!
+    - Market microstructure should be the answer to this question. See @OHara1995 and @Vives2008.
+    - But there we find rational expectations and Bayesian Nash equilibrium theories (Harsanyi Doctrine)
+    - It seems it's equilibrium turtles all the way down.
+    - They are at least asking Mengerian questions. But they are hamstrung by their exclusive Walrasian mindset.
+
 
 # The Real Options Theory of Entrepreneurship 
 
 
 # Computational Statistical Catallactics
 
+- @TesfatsionJEM2017 meets @BuchananJEM2001
+- @AxtellAAE2017
+- Vriend SEJ 2xxx and Wagner and Devoureaux
+
 
 # Summary and Conclusions
 
+Are your foundations are belong to us. 
 
 \newpage
 
