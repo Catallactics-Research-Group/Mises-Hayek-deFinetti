@@ -10,7 +10,7 @@ date: 1-20-2026
     - intellectual arbitrage
     - define arbitrage, using the definition of Mises (or from previous Tyler paper where he defines it?)
 
-2. Arbitrage Triangle
+2. Arbitrage Triangle --TYLER with EMMY
 
     - Arbitrage foundations of catallactic 
         - knowledge problem
@@ -31,7 +31,7 @@ date: 1-20-2026
         - Convergence to equilibrium (convergence to no-arbitrage setting) very quickly, and so most of the papers are about the no-arbitrage condition
         - How does this happen through the pricing mechanism (make this formal using probability)
 
-3. deFinetti as a catallactic: 
+3. deFinetti as a catallactic: --TYLER and EMMY
 
     **Goal:** prove that there is an Austrian interpretation of BdF that is powerful
     - Case and class (frequentism) probability (separate axioms? They aren’t equal?)
@@ -42,7 +42,7 @@ date: 1-20-2026
     - He talks about price (apparently?)
     - Also lad? Possibly?
 
-4. BdF to finance: 
+4. BdF to finance: --MARC and JAKE
 
     - Mengerian view of price?
     - How does price result in coordination? What is actually the mechanism?
@@ -50,9 +50,7 @@ date: 1-20-2026
     - Fundamental theorem of provision = fundamental theorem of asset pricing
     - Can rebuild the foundation of finance using these ideas? 
 
-5. Real Option
-
-6. Computational statistical catallactics
+5. Computational statistical catallactics --MARC and JAKE
 
     **OR:** how the evaluation game follows from these ideas
 
@@ -61,5 +59,10 @@ date: 1-20-2026
     **Notes:**
     - This is where the hydrodynamic limit start to come into play
     - Agent for the marketplace (subjective probability distribution)
+
+6. Real Options --TYLER and EMMY and MARC
+    - Misesian economic calculation becomes ...
+    - Search theory, John McCall bounded rationality
+    - 
 
 7. Conclusion
