@@ -37,7 +37,8 @@ date: 1-20-2026
     - You can assign probabilities to things that can’t be repeated infinitely often via a bet, so it is personal and complicated
     - deFinetti defines probability in exactly the same ways as the Austrians want to understand the economy. He defines probability using social interaction, and therefore the fact that the economy is a social system is inherently built in
     - deFinetti uses probability, price, and prevision interchangeably
-    - Also, will wnat to rely Bernardo and Smith here, with countable additivity 
+    - Also, will want to rely Bernardo and Smith here, with countable additivity; they cite Lad but don't require commitment to finite addivitity perspective.
+    - There's going to possibly be some connection to proper scoring functions, but it requires some thinking. 
 
 4. BdF to finance: 
 
