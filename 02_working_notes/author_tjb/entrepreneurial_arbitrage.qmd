@@ -1,0 +1,22 @@
+Here is a draft of the "arbitrage foundations" of Austrian catallactics, synthesized into two crisp paragraphs as requested.
+
+### The Arbitrage Foundations of the Market Process
+
+At the heart of Austrian catallactics lies the recognition that the market is not a state of rest, but a dynamic process driven by **entrepreneurial arbitrage**. Unlike the static "no-arbitrage" assumption of modern finance—which treats price discrepancies as instantaneous anomalies—Austrian theory posits that these discrepancies are the pervasive feature of reality that makes economic calculation possible. The entrepreneur, acting as Mises’s "driving force," exercises **alertness** to perceive situations where resources are undervalued in their current use relative to their potential value to consumers. By acting on these opportunities—effectively buying low in factor markets and selling high in product markets—the entrepreneur initiates a tendency toward equilibrium, correcting market ignorance and coordinating the discordant plans of market participants.
+
+Crucially, this foundational arbitrage is **speculative and uncertain**, rather than mechanical or risk-free. It rests on the entrepreneur's judgment of future conditions rather than the exploitation of simultaneous, known prices. As James Buchanan observed, this process of exchange is not merely an allocation of given resources, but an emergent discovery procedure where "order" is the byproduct of individuals constantly seeking to improve their positions. Therefore, the Austrian market process is best understood as a continuous, error-correcting arbitrage mechanism, where the pursuit of profit serves as the signal that bridges the gap between present disequilibrium and future coordination.
+
+---
+
+### Why this framing works (based on your notes):
+
+* **The Mises/Kirzner Synthesis:** It uses Kirzner’s explicit mechanism (alertness to price discrepancies) to explain Mises’s broader concept (the entrepreneur as the driving force/promoter). It frames the "buying inputs/selling outputs" cycle as the ultimate arbitrage trade.
+* **The "No-Arbitrage" Contrast:** The text explicitly differentiates this from the "law of one price" or risk-free finance models. It emphasizes that Austrian arbitrage happens *through* time and facing uncertainty (Mises’s "speculator"), not just across space.
+* **Buchanan’s Emergence:** By referencing the "emergent discovery procedure," it incorporates Buchanan’s view that the market structure itself is defined by people trading rights and opportunities (arbitraging their situations) rather than maximizing a static function.
+
+
+## Notes 
+
+- See @FiglewskiJFM2017 and @FiglewskiJF1989 for a financial economist who is thinking directly about arbitrage as a real-world process
+- Compare and contrast risk-neutral pricing from neoclassical finance with our computational statistical catallactic version based upon a subjective posterior predictive distribution
+    - The options market-maker as an Austrian entrepreneur

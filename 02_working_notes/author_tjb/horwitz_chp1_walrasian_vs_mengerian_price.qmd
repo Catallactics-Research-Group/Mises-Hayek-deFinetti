@@ -1,0 +1,15 @@
+Based on the text, when the author describes the Walrasian view of prices as **"parametric,"** he means that economic actors treat prices as fixed, external inputs for their decision-making.
+
+Specifically, this implies:
+
+* **Prices are "Given" Inputs:** In the Walrasian model, prices are independent variables that individuals and firms take as "given" data points. They use these prices solely as *ex ante* inputs to calculate how to maximize utility or profit before taking action.
+
+
+* 
+**Contrast with the Austrian View:** The author contrasts this with the Mengerian or Austrian perspective, where prices are not just external inputs (parameters) but are "endogenous" phenomena—outcomes that emerge directly from the subjective choices and discovery processes of human actors.
+
+
+* 
+**Static vs. Dynamic:** Because Walrasian models often assume a market-clearing price is found before any action takes place, prices have no function other than serving as these static calculation inputs.
+
+
