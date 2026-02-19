@@ -34,13 +34,11 @@ date: 1-20-2026
 3. deFinetti as a catallactic: 
 
     **Goal:** prove that there is an Austrian interpretation of BdF that is powerful
-    - Case and class (frequentism) probability (separate axioms? They aren’t equal?)
-    - You can assign probabilities to things that can’t be repeated infinitely often
-    - deFinetti chooses case (bayesian here?) 
-    - deFinetti defines probability in exactly the same ways as the Austrians? He defines probability using social interaction, and therefore the fact that the economy is a social system is inherently built in
-    - Weather expectations in orange juice prices problem? Somewhere in here? 
-    - He talks about price (apparently?)
-    - Also lad? Possibly?
+    - You can assign probabilities to things that can’t be repeated infinitely often via a bet, so it is personal and complicated
+    - deFinetti defines probability in exactly the same ways as the Austrians want to understand the economy. He defines probability using social interaction, and therefore the fact that the economy is a social system is inherently built in
+    - deFinetti uses probability, price, and prevision interchangeably
+    - Also, will want to rely Bernardo and Smith here, with countable additivity; they cite Lad but don't require commitment to finite addivitity perspective.
+    - There's going to possibly be some connection to proper scoring functions, but it requires some thinking. 
 
 4. BdF to finance: 
 
