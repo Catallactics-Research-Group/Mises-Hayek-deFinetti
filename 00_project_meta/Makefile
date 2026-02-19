@@ -21,6 +21,7 @@ $(HTML): $(QMD) $(BIB)
 
 clean:
 	@rm -f $(PDF) $(HTML) proposal.log
+	@rm -rf proposal_files
 
 help:
 	@echo "Usage: make [target]"
