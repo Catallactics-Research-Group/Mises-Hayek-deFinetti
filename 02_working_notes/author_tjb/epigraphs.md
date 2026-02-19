@@ -8,4 +8,4 @@
 Elsewhere Buchanan restates this as the following: 
 
 
-> **"Economics is about arbitrage.** *The behavioral paradigm central to economics is that of the trader whose Smithean propensity to truck and barter locates and creates opportunities for mutual gains. This paradigm is contrasted with that of the maximizing engineer who allocates scarce resources among alternatives. As several of the essays in this volume have suggested, the maximization paradigm is the fatal methodological flaw in modern economics."* 
+> **"Economics is about arbitrage.** *The behavioral paradigm central to economics is that of the trader whose Smithean propensity to truck and barter locates and creates opportunities for mutual gains. This paradigm is contrasted with that of the maximizing engineer who allocates scarce resources among alternatives.... the maximization paradigm is the fatal methodological flaw in modern economics."* 
