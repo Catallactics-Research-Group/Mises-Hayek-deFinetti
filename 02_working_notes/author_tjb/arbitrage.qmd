@@ -1,0 +1,35 @@
+# Aribtrage trinitarianism
+
+- Austrian catallactics
+- Bruno de Finetti's operational subjective probability theory. 
+- Modern finance
+
+
+## The Arbitrage Foundations of Austrian Catallactics 
+
+The Nobel laureate James Buchanan in his November 1963 Presidential Address to the Southern Economics Association rather provacatively asked his audience of professional economists (@BuchananSEJ1964): "What should economists do?" In providing an answer to his own question Buchanan cited a passage from Adam Smith's *Wealth of Nations* that traces the emergence of the division of labor^[1]: 
+
+> *It is the necessary, though very slow and gradual, consequence of a certain propensity in human nature which has in view no such extensive utility;* ***the propsensity to truck, barter, and exchange one thing for another.*** 
+
+Buchanan then states: 
+
+> *But surely here is his answer to what economics or political economy is all about. Economists 'should' concentrate their attention on a particular form of human activity, and upon the various institutional arrangements that arise as a result of this form of activity. Man's behavior in the market relationship, reflecting the propensity to truck and to barter, and the manifold variations in structure that this relationship can take; these are the proper subjects for the economist's study.... The elementary and basic approach that I suggest places "the theory of markets" ... at center stage. My plea is really for the adoption of a sophisticated "catallactics."* 
+
+Apparently, Richard Whately (@Whately1966) introduced the term catallactics into economics. Subsequently the Austrian economists Ludwig von Mises and F.A. von Hayek both adopted the term to describe their unique brand of economic theory. @Hayek1978b explains at length: 
+
+> *The confusion which has been created by the ambiguity of the word economy is so serious that for our present purposes it seems necessary to confine its use strictly to the original meaning in which it describes a complex of deliberately coordinated actions serving a single scale of ends, and to adopt another term to describe the system of numerous interrelated economies which constitute the market order. Since the name 'catallactics' has long ago been suggested for the science which deals with the market order and has more recently been revived, it would seem appropriate to adopt a corresponding term for the market order itself. The term 'catallactics' was derived from the Greek verb katallattein (or katallassein) which meant, significantly, not only 'to exchange' but also 'to admit into the community' and 'to change from enemy into friend'. From it the adjective 'catallactic' has been derived to serve in the place of 'economic' to describe the kind of phenomena with which the science of catallactics deals. The ancient Greeks knew neither this term nor had a corresponding noun; if they had formed one it would probably have been katallaxia. From this we can form an English term catallaxy which we shall use to describe the order brought about by the mutual adjustment of many individual economies in a market. A catallaxy is thus the special kind of spontaneous order produced by the market through people acting within the rules of the law of property, tort and contract.*
+
+In a subsequent book on the topic of economic methodology titled again "What Should Economists Do?", @Buchanan1979 inteprets catallactics through the lens of the principle of arbitrage: 
+
+> ***Economics is about arbitrage.*** *The behavioral paradigm central to economics is that of the trader whose Smithean propensity to truck and barter locates and creates opportunities for mutual gains. This paradigm is contrasted with that of the maximizing engineer who allocates scarse resources among alternatives. As several of the essays in this volume have suggested, the maximization paradigm is the fatal methodological flaw in modern economics.* 
+
+With this introduction we can now outline and compare and contrast two approaches to economics that we might call neo-Walrasian and neo-Mengerian. These take their names from two of the three economists typically referred to as the *marginal revolutionists* -- Leon Walras and Carl Menger.^[2] Menger was the father of the Austrian school of economics. Catallactics is thus Mengerian economics. Mises, Hayek, and Buchanan are claiming a tradition that goes back through Carl Menger to Adam Smith in its origins. The methodology of modern mainstream economics is characterized by a priori equilibrium conditions and their subsequent mathematical and econometric methods. Walrasian economics is equilibrium economics. Equilibrium is a hypothetical state of an economic system characterized by perfect competition that is synonomous with a no-arbitrage condition. No-arbitrage conditions impose end state or boundary constraints which allow certain mathematical relationships to be imposed on prices that eliminate profit opportunities. Frank Knight famously stated that "in perfect competition there is no competition." Likewise in an economy charactized by no-arbitrage conditions there is no arbitrage. A Walrasian 'economy' is a hypopthetical end state of perfection and in this methodological framing competition and arbitrage are imperfections. By contrast, a Mengerian 'catallaxy' is a spontaneous social order that is internally driven by rivalrous competition and entrepreneurial arbitrage. @Mises1966 elaborates: 
+
+> *The driving force of the market process is provided neither by the consumers nor by the owners of the means of production — land, capital goods, and labor — but by the promoting and speculating entrepreneurs. These are people intent upon profiting by taking advantage of differences in prices. Quicker of apprehension and farther-sighted than other men, they look around for sources of profit. They buy where and when they deem prices too low, and they sell where and when they deem prices too high. They approach the owners of the factors of production, and their competition sends the prices of these factors up to the limit corresponding to their anticipation of the future prices of the products. They approach the consumers, and their competition forces prices of consumers’ goods down to the point at which the whole supply can be sold. Profit-seeking speculation is the driving force of the market as it is the driving force of production.*
+
+Mises's student Israel Kirzner makes the connection directly: "My understanding of the Misesian view of the entrepreneur and of its similarity to my own can be expressed by characterizing the Misesian view of profit as well as my own as an 'arbitrage' theory of profit." (See @Kirzner1973, p. 68). 
+
+Thus in a Walrasian 'economy' there is no arbitrage while in a Mengerian 'catallaxy' arbitrage is the central driving force! We can now see why Buchanan believes that arbitrage has not become central to economics like it should be. Austrian catallactics then provides the first pillar of our arbitrage trinitarianism.  
+
+[1]: Jike.
+[2]: The third being William Stanley Jevons. 
