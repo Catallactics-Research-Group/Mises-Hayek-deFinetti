@@ -1,3 +1,11 @@
+# A Mathematical Model of the Price Adjustment Process 
+
+In his famous lectures on physics, Nobel laureate Richard Feynman made the following statement:
+
+> *... there is a physical problem that is common to many fields, that is very old, and that has not been solved. It is not the problem of finding new fundamental particles, but something left over from a long time ago - over a hundred years. Nobody in physics has really been able to analyze it mathematically satisfactorily in spite of its importance to the sister sciences. It is the analysis of circulating or turbulent fluids.*
+
+
+
 # Economics as Human Action 
 
 > *"Economics has two tasks. The first is to make the world around us intelligible in terms of human action and the pursuit of plans. The second is to trace the unintended consequences of such action."* -- Ludwig Lachmann 
