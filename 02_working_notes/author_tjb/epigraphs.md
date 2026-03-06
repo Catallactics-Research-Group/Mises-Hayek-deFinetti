@@ -1,9 +1,13 @@
+# Arbitrage 
+
+> *There has been a tremendous neglect of the notion of ... emergent choice; that we don't really have before us objects among which to choose. We create them in the act of choice...* **Arbitrage really has not become central to economics like it should be.** -- James M. Buchanan
+
+
 # A Mathematical Model of the Price Adjustment Process 
 
 In his famous lectures on physics, Nobel laureate Richard Feynman made the following statement:
 
 > *... there is a physical problem that is common to many fields, that is very old, and that has not been solved. It is not the problem of finding new fundamental particles, but something left over from a long time ago - over a hundred years. Nobody in physics has really been able to analyze it mathematically satisfactorily in spite of its importance to the sister sciences. It is the analysis of circulating or turbulent fluids.*
-
 
 
 # Economics as Human Action 
