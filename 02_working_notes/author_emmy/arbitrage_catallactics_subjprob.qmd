@@ -5,7 +5,7 @@ format: pdf
 
 **Premise**
 
-The goal of this paper is to operationalize Austrian microfoundations. By Austrian microfoundations, we are referring to theories of how individual choice and behavior based on subjective beliefs, economic calculation, and learning result in emergent market order and coordination. These foundations build on the works of Friedrich Hayek, Ludwig von Mises, Israel Kirzner, and James Buchanan, among others. By operationalize, we mean supplying these theories with the numerical toolkits they need in order to be predictive.  
+The goal of this paper is to operationalize Austrian microfoundations. By Austrian microfoundations, we are referring to theories of how individual choice and behavior based on subjective beliefs, economic calculation, and learning result in emergent market order and coordination. These foundations build on the works of Friedrich Hayek, Ludwig von Mises, Israel Kirzner, and James Buchanan, among others. By operationalize, we mean supplying these theories with the numerical toolkits they need in order to be predictive.
 
 **Knowledge problems and Economic Calculation**
 
@@ -38,12 +38,3 @@ cite Harper 2010
 Talking about how these subjective probabilities are measured will help make the connection between subjective beliefs and prices more explicit. Lad has an operational method for specifying your probability or prevision for an event. This prevision is defined as a measurement of your knowledge of an event, and your uncertainty about its future occurrence. It's best explained by example. The example statistician Frank Lad gives is the artificial insemination of cows; 50 cows are artificially inseminated, and you want to measure your subjective belief of how many will actually give birth to a calf. You specify a maximum stake sufficiently divisible for measuring your expectations, but not so big as to affect your life; we’ll call it $100. Let’s call the number of calves born X. Your prevision for event A, let’s call it P(A), is the amount of money at which you would be indifferent to receiving either $P(A) or $X. Note that $P(A) is a for-sure, fixed amount, where $X depends on how many calves are born. For example, if you’d rather recieve $X to $5, $X to $35, $50 to $X, but are indifferent between $41 and $X, then your prevision is $41. Probability is a prevision but between [0,1], and where the event A can take on a value of 0 or 1. For example, the event A = {X=41} can take on a value of 0 or 1, and your probability that A = 1 is the amount at which you would be indifferent between receiving the amount for sure or the $A (so $1 if it occurs and $0 if it doesn’t).
 
 All possible outcomes for an event is called a “realm” using Lad’s terminology, and can be thought of as discrete outcome spaces that correspond to quantities measured as the result of an a priori defined measuring procedure. This relates to Harper’s number sequences by situating numbers in a social, human context where what we can do with them is limited by our measuring capabilities and operational procedures. Others have to accept our methods in order for our science to communicate anything of value to them. They also have to be somewhat standardized. The numerical toolkits used in science are adapted to the needs of the scientist, but the scientist’s way of thinking also adapts to the numerical toolkit - think of the way prevision-probability was introduced. This operational way of describing uncertain beliefs is different from the frequentist presentation of probability, and has a different way to measure it. It maps epistemic beliefs to ontological prices. This is key to understanding how individual expectations get incorporated into prices and communicated to others.
-
-
-
-
-
-
-
-
-

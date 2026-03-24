@@ -1,7 +1,7 @@
 ---
 title: "Bayesians in the Catallaxy"
 subtitle: "A Research Proposal"
-citeproc: true 
+citeproc: true
 bibliography: biblio.bib
 format: pdf
 number-sections: true
@@ -22,121 +22,50 @@ abstract: This paper is about ***arbitrage trinitarianism***.
 
 > ***Economics is about arbitrage.*** *The behavioral paradigm central to economics is that of the trader whose Smithean propensity to truck and barter locates and creates opportunities for mutual gains. This paradigm is contrasted with that of the maximizing engineer who allocates scarce resources among alternatives.... the maximizing paradigm is the fatal methodological flaw in modern economics.* -- James M. Buchanan
 
-This paper is scientific triangular arbitrage. It is also fundamentally about arbitrage. We agree with Buchanan that arbitrage has not become central to economics as it should be. 
+We strongly agree with Nobel laureate James M. Buchanan: arbitrage has not become central to economics as it should be. This paper is fundamentally about arbitrage. At the intellectual level, we deliver a literal triangular arbitrage by examining and combining three separate research programs unified by a single underlying principle — the inherent role of arbitrage. Austrian catallactics, Bruno de Finetti’s operational subjective probability theory, and modern finance are three distinct areas of research each founded upon the arbitrage principle. But these foundations were developed in isolation of each other — they have not properly recognized each other as kindred. A synoptic reading of each literature reveals deep connections and opportunities for profound insight. We call this arbitrage trinitarianism: the unification of three separate literatures and the new ideas that emerge from their combination that none could achieve alone. Understanding this common foundation is more than an intellectual exercise; we use the insights obtained by a thorough understanding of these connections to develop a unified, empirically operational framework for modeling decisions.
+
+In this proposal, we describe the three research programs of interest and hint at the strong connections between each discipline. Additionally, we introduce computational statistical catallactics, an operational methodology that leverages and applies the results of this intellectual arbitrage and which provides a framework for approaching a broad class of modeling and prediction questions.
+
+The Journal of Economic Perspectives describes its own scholarly mission as providing “intellectual arbitrage” for economists. We propose that our project is exactly the type of intellectual arbitrage of inherent interest to readers of JEP.
+
+In his 1979 book on economic methodology titled “What Should Economists Do?”, Buchanan states unambiguously and provocatively:
+
+“Economics is about arbitrage. The behavioral paradigm central to economics is that of the trader whose Smithean propensity to truck and barter locates and creates opportunities for mutual gains. This paradigm is contrasted with that of the maximizing engineer who allocates scarce resources among alternatives…. the maximization paradigm is the fatal methodological flaw in modern economics.”
+
+This paper is not a literature survey; it is a deep intellectual triangular arbitrage — one that motivates the development of a new economic methodology that will appeal to even the most mathematically-hesitant economists.
+
+# Austrian Catallactics
+
+The first pillar of the arbitrage triad is Austrian catallactics where we embrace some of the Austrian theory and ontology, while resisting some layers of it in the broader project of developing a mathematical model that bridges the gap between Austrian economics and traditional mathematical economist. We agree with Arthur (2023) that “the Austrian approach deserves a more central place in economic theory.” But rather than simply praise the Austrians and then just as quickly move past them, we intend to build directly upon their conception of the market as a competitive entrepreneurial discovery process (Hayek 2002; Buchanan and Vanberg 1991; Kirzner 1997; High 2012; and V. L. Smith 2015). First, we embrace Austrian critiques of traditional economic theory and some of its ontological foundations by acknowledging the open and irregular nature of the market system we are modeling (Lawson 2005 and 2015). Like the Austrians, we accept that such starting assumptions insufficiently model markets, however, we resist the conclusion that markets and agents cannot be mathematically modeled because of mathematical ontology.
+
+Second, we embrace Mises’s emphasis on monetary calculation and intentional human action as providing the necessary foundations (Mises 2007a, 2007b, 2007c, 2007d; and Horwitz 2004). For Mises the entrepreneur is the “driving force of the market” and according to Kirzner ([1973] 2013) the Misesian entrepreneur provides “an arbitrage theory of profit.” We emphasize that the Mises-Hayek argument in this context was meant to undermine socialist calculation models in favor of entrepreneurial economic calculations in the face of epistemic and coordination problems (Boettke 1998; Horwitz 2004; Vaughn 1980). However, we resist the early Hayakian empiricist ontology that reduces all structures to subjective agent-based ones and instead opt for an ontology of real structures that are based on subjective agents and beliefs without being reducible to beliefs, concepts, and actions of human agents (Lawson, 2005, 150). Upon these foundations the market emerges as a spontaneous and open order from which we can study the epistemic properties of the price system without zero-sum transactions and the irrationality of some agents (Hayek 1937, 1945). By refocusing in these foundational ways, our model will also shift focus from predictive—future outcomes—towards descriptive—modeling economic mechanisms and thus represent an improvement over current macroeconomic models (Lawson 2005). Third, we emphasize that at the heart of Austrian catallatics is a latent theory of the price mechanism as a socially real quantitative process. The irony is that an operational model of this process has so far eluded economic theorists (Fisher 1983). By embracing some but not all the Austrian theory, we build an Arbitrage triad that bridges between traditional mathematical modeling and Austrian Catallactics.
 
 
-# Arbitrage Trinitarianism
+# Bruno de Finetti’s Operational Subjective Probability
 
-## Arbitrage Foundations of Catallactics 
+The second pillar focuses on developing and adopting an operational subjective probability. Here we take a nuanced ontological position, not only acknowledging the open nature of the economic system we aim to model but also affirming subjective Bayesian probabilities in place of objective probabilities at the agent level of the market (Lawson 2005 and 2015). Bruno de Finetti’s operational subjective probability theory is founded upon the Dutch book argument (DBA) (Vineberg 2022). At the heart of the
 
-> ***Economics involves actors.*** *Without actors, there is no play. This truism has been overlooked by modern economists whose universe is peopled with passive responders to stimuli. If all are price-takers, who sets price? If all behavior is rationally responsive, how can change occur? How can entrepreneurship be modeled? Increasingly, I have come to the view that the role of entrepreneurship has been the most neglected area of economic inquiry, with significant normative implications for the general understanding of how the whole economy works.* -- James M. Buchanan 
+DBA is the logic of arbitrage. In fact, it is a theorem of no-arbitrage at the subjective level of the individual agent. This is the proper place for the concept of no-arbitrage. The DBA defines individual rational behavior as a coherent plan. We emphasize that de Finetti’s is an economic derivation of the axioms of probability and in this regard is entirely unique. De Finetti was as thoroughgoingly subjectivist as any Austrian economist. His concerns with epistemology and subjective knowledge are identical to those of Hayek (1948). By accepting subjective probability at the agent level but resisting the ontological reduction of all economic structures to the agent level of markets, we provide space for modeling how the agent’s beliefs, actions, and concepts give rise to various economic mechanisms and structures. With Kreps (1988b) we agree that De Finetti’s representation theorem is the fundamental theorem of operational statistics (see also Bernardo and Smith 1994; Lad 1996; McCall 1991; Poirier 2011). Remarkably, his Fundamental Theorem of Prevision is identical to the Fundamental Theorem of Asset Pricing (see Nau 1999, 2001, 2023; Nau and McCardle 1991; and Schervish, Seidenfeld, and Kadane 2008). De Finetti uniquely provides the subjective probability foundations for an operational theory of arbitrage as the driving force of the catallaxy. In doing so, he stands as the mechanistic bridge for a more accurate modeling of subjective probabilities in economic systems.
 
+Notes from BG:
 
-Fundamental papers and chapters: 
+I suggest a terminology shift from ‘trinity’ to ‘triad’ to avoid confusion with the more typical religious use of ‘trinity’ and to increase clarity and decrease technical language.
 
-* @HayekEconomica1937
-* @HayekAER1945
-* @Hayek1978b
-* @BuchananSEJ1964
-
-
-## Arbitrage Foundations of de Finetti's Operational Subjective Probability Theory
-
-> *Some 15 billion years ago,as best we can tell, we were a dense mass of exploding gases. Today we are as we find ourselves, evolved into our present state of partially-informed being and knowing, but uncertain precisely about all we have been, and uncertain about what we will become. One thing we can be sure of is that there has been no repeatability of stable conditions that provides a real base for "the primitive notion of probability" as something outside of ourselves.* ***Probability is nothing other than the logic of our uncertain judgements about the world.*** -- Frank Lad
-
-- See @NauTD2001 and @Nau1999
-- See @NauMcCardleTD1991
-- See @Nau2023
-- See @SchervishSeidenfeldKadaneIJAR2008
-- See @Pressacco2009 and @PressaccoZiani2010
-
-- See @HajekBJPS2008
-    - Hajek proposes the "Czech Book Theorem" which rescues the Dutch Book Theorem. 
-    - The Misesian entrepreneur can accept fair or favorable bets. 
-    - This is needed for the market-maker
-
-
-
-## Arbitrage Foundations of Modern Finance 
+# Arbitrage Foundations of Finance
 
 > *[W]hen judged by its ability to explain the empirical data, option pricing theory is the most successful theory not only in finance, but in all of economics. It is now widely employed by the financial industry and its impact on economics has been far-ranging. At a theoretical level, we now understand that option pricing theory is a manifestation of the force of arbitrage and that this is the same force that underlies much of neoclassical finance.* -- Stephen A. Ross
 
 - @Friedman1953 and Fama JB 1965
-- The Fundamental Theorem of Asset Pricing 
+- The Fundamental Theorem of Asset Pricing
 - Steve Ross on arbitrage intuition and no-arbitrage theory
-- Market microstructure 
-    - It's equilibrium turtles all the way down. 
+- Market microstructure
+    - It's equilibrium turtles all the way down.
 - See NA (circular logic)
 - @FiglewskiJFM2017
 
 
-# Bruno de Finetti: The Forgotten Austrian Catallactist
-
-> *It was economic calculation that assigned to measurement, number, and reckoning the role they play in our quantitative and computing civilization.* -- Ludwig von Mises
-
-- The fundamental claim of this section is that Bruno de Finetti's operational subjective derivation of probability is a ***catallactic theory***.
-    - He relies upon money prices to elicit subjective probabilities. 
-    - He agrees wholeheartedly with Mises about prices as "an aid to the mind"
-    - Compare and contrast the Walrasian vs. the Mengerian view of price. See @Horwitz2000 Chapter 1.
-    - Though he studies under Vilfredo Pareto, it is abundantly clear that his view of price is the subjective Mengerian one!
-
-- @HarperJIE2010 establishes the "social ontology" of numerical toolkits for Misesian economic calculation.
-    - Numbers are economic capital / economic institutions.
-    - "Even institutional, evolutionary, and Austrian economists tend to take numbers for granted. They do not examine how number sequences come into existence in an economic sense as a result of the social division of labor, economic specialization, and economic exchange. They pay little, if any, attention to the socially recognized systems of numerical symbolization that are used to represent exchange ratios or money prices." (see p. 168).
-
-- Bridge from @HarperJIE2010 to @Lad1996 (Chapter 2-4).
-
-- The DBT relates to Misesian economic calculation (praxeology)
-- Exchangeability relates to Hayekian knowledge-and-coordination problems
-- Mises-Hayek provide the price-theoretic microfoundations for de Finetti
-
-- There is a small cottage industry in trying to convince Austrians to adopt a probability theory.
-    - They are allergic to it. For example, see @CaplanSEJ1999
-    - Our claim is stronger:
-        - It isn't just that de Finetti's probabilism is compatible with Austrian subjectivism (a nice fit)
-        - Austrians are compelled to accept de Finetti by their own price-theoretic microfoundations.
-        - De Finetti's derivation of subjective probability **is Misesian economic calculation**
-        - Austrians face a Dutch book: accept their own price theory and accept de Finetti OR reject de Finetti and reject their own foundations.
-
-
-# The Catallactic Foundations of Financial Markets
-
-> *An understanding and appreciation of the principle of spontaneous order or coordination may emerge from the very citadels of objectivisim, and often does.* -- James M. Buchanan
-
-
-- Mises-Hayek-de Finetti attack on microfoundations of financial markets 
-- See @DeFelicePelloni1987 for how de Finetti's probabilism challenges rational expectations
-- Remarkably at the heart of the most predictive theory in all of economics (per Steve Ross: options theory) there is a core catallactic interpretation
-    - This is the options market-maker as entrepreneur/arbitrageur
-    - See @FiglewskiJF1989
-- Incredibly, de Finetti's **Fundamental Theorem of Prevision** (FTP) is identical to the **Fundamental Theorem of Asset Pricing** (FTAP) from modern finance theory.
-    - See @NauTD2001, @Nau2023
-    - See @Ross1989
-- Given that de Finetti's FTP applies at the subjective level of the agent and the FTAP applies at the market level there is an implied solution of a Hayekian knowledge-and-coordination problem. How?!
-    - Market microstructure should be the answer to this question. See @OHara1995 and @Vives2008.
-    - But there we find rational expectations and Bayesian Nash equilibrium theories (Harsanyi Doctrine)
-    - It seems it's equilibrium turtles all the way down.
-    - They are at least asking Mengerian questions. But they are hamstrung by their exclusive Walrasian mindset.
-
-
-# The Real Options Theory of Entrepreneurship 
-
-
-# Computational Statistical Catallactics
-
-- @TesfatsionJEM2017 meets @BuchananJEM2001
-- @AxtellAAE2017
-- Vriend SEJ 2xxx and Wagner and Devoureaux
-
-
-# Summary and Conclusions
-
-All your foundations are belong to us. 
+# Comupational Statistical Catallactics
 
 \newpage
 
-# References 
-
-
-
-
+# References

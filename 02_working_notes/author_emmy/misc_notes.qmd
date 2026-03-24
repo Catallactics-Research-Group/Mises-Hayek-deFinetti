@@ -1,0 +1,123 @@
+## Como se dice Arbitrage
+
+**Sources**
+-Competition and entrepreneurship -- Kirzner (98-99)
+    - "market process proceeds through entrepreneurial competition. In this process market participants become aware of opportunitties for profit: they perceive price discrepancies (either between the price offered by buyers for a product and that asked by sellers for the necessary resources) and move to capture the difference for themselves through their entrepreneurial buying and selling."
+    - competition is about offering buyers/sellers opportunities that are better than what's currently available - have to see these possibilities, imagine them.
+- Figlewski JFM 2017
+    - Quote gemini summary: Derivatives valuation models are based on the pricniple of "no-arbitrage," which says arbitrage trading eliminates riskless profits and drives the market price to the model value. This is a mathematical condition in theoretical models, but doesn't always turn out this way in real-world
+    -  read this then write about arbitrage.
+    - Risk neutral pricing refers to pricing of the derivative when a riskless synthetic portfolio comprised of the underlying asset + some cash can be made. If both payoffs are the same, the price should be the same. This allows us to act as if traders are risk neutral when we price - we just price using the risk-free portfolio with the identical payoff. If they weren't priced the same, traders would capture the extra profit via arbitrage. Figlewski's point is that you can't always make the arbitrage; there's a spectrum, and that is why we see deviations between model and reality in derivative pricing.
+    - when we say no arbitrage, we mean there is no discrepancy between the derivative price and the risk-less synthetic portfolio price if they have the same payoff
+    - Impediments to arbitrage trade:
+        - transaction costs
+        - short selling not possible or hard
+        - non-continuous markets
+        - unknown parameter inputs - help us determine distribution & expected value of payoff, which we then discount to get the price.
+        - margin requirements
+        -
+    - Figlewske presents 4 general cases where arbitrage trade is more or less possible and LOOP may or may not apply.
+
+    - "Learning what investors actually do and then modeling that is likely to lead to better empirical results and more understanding of the markets than modeling what von Neumann-Morgenstern expected utility maximizers ought to be doing."
+    - "... it does not make sense to obsess over mathematical fine points of densities and returns processes: they are all wrong. That is, market prices arise out of the interplay of supply and demand from an every-changing mass of individual and idiosyncratic traders. There is no reason at all that the resulting returns should consistently follow any particular stochastic process, particularly not one whose main appeal is that it is familiar and mathematically convenient for us." I think this is referring to the assumptions and models we are using to determine the expected payoff of the underlying. Since we are using this to price derivatives, its relevant.
+    - For modeling this in an agent-based context, would we assume one of these models for the underlying and then see how the agent responds? It seems like all of our choices about the derivative depend on the process driving the underlying's price - but what *is* driving the underlying's price? We said this is the process driving the derivative's price but that is entirely dependent on the underlying asset it seems. Well the underlying and the risk free rate. you know what I'm saying.
+    - To model this, you would need an agent that is the underlying asset - entrepreneur, a company or something I guess. And then you would have other agents interacting with them? Or you would say the underlying asset is the environment and then have your agents wander around inside that.
+    
+    - The black scholes theorem. Gave us assumptions for asset pricing, but we don't use this as much. Other models use rational expectation - think gene fama, who people associate with Hayek. But think about Fama's efficient market, and that's the idea of rational expectations. From there FTAP in probabilisitic language does funky things with equivalent martinglae measure. They talk about the physical, historical objective return distribution. FTAP says in an economy with no arbitrage. Trying to get at true risky rate of return for a derivative. Use something called Nicadime derivative ricky something. This is kolmogorov I with measure theory. He re-derived it later using discrete math inspired by de Finetti. Something about measure theory finance accepts, we don't need. They say rational expectations is bayes' with prior. This gives rise to physical distribution. The Q is the equivalent martingale measure or risk neutral distribution. In this equivalent world, we can discount at a risk free rate. But only applies in places where institutions are good and driving the process correctly. Ch. 10 Brandimarte master for dynamic programming and connection to search theory. 
+    - No arbitrage here, theory of no-arbitrage. Descriptive of an equilbrium state but not good as a process. Search theory is about the process, in the presence of frictions we have to search. Menger's story of the origin money is a story of search, just didn't mathematize it. Money is a priori to all civilization? Evolutionary theory of process and development and process. Instituttions emerge to reduce firctions and cost. No search theory and no institutions in the finance BS world
+    -Goal of economics - understand the world in terms of human action, and the unintended consequences of those actions. 
+    - Buchanan on entrepreneurship and resource allocation
+    - Institutions emerge from human action, not top-down planning. 
+    - People have individual plans and goals. Propensity to truck, barter, and exchange. 
+    - How do you model institutional emergence? Comparison of with and without?
+    - market-maker in options market is just an austrian entrepreneur, and this is the driving force of the market. 
+    - Think about Jack High critique of search theory, says we're going right back to physical distribution. De Finett's probability theory gets us there - we don't have to assume it exists. Figlewski is asking Mengerian question, the thing comes from a dynamic trading strategy - searching for replicating portfolio through time that allows them to make the hedge. This is like fractional researve banking? Looking for self-financing hedged portfolio. Translate de Finetti into the language of the austrians. Austrians not interested in preliminatry equilibirium problem, its not the main problem. Going to come out as Monte Carlo, bc can't something about conjugate, and then this is prediction enginge. Monte carlo perspective? Don't be tempted to conflate prediction with reality, talk about loss function. This to is subjective. But can learn through time. Adam Smith - division of labor is division of knowledge. What we are trading is bits of knowledge. At the heart of that is search process. Another word for that is arbitrage and entrepreneurship. Economist are historians, looking back and talking through process. and remake theory models and data, embrace it. Arbitrage in finance vs. arbitrage in poetic austrian everywhere language. 
+    - Search is ubiquitous in the catallaxy, everything is a search theory. Relationship between search and game theory. Figlewski 1989, asking Mengerian questions, doesn't know Menger. He has Monte Carlo. Simulates stuff. Terrence Speed on simulation - simulation is what you do when you can't do the math!! Figlewski simulates and adds trading costs. Its like proto-agent-based catallactic model. McCall honey bee as teacher. But his market maker is using maximum likelihood, poor man's Bayes. Confronting Good type II rationality, using faster heuristics, but lower time preference and invest in compuational capital and be better in business world. Search theory - do you need a full blown model? Hard to calculate marginal cost and marginal revenue of the search process. Doesn't exist, act as if does. Catallactic view of machine learning, agi can't get rid of the human. 
+    
+    - Options theory to search theory. Rebuild Figlewski 89 on de finetti grounds. Evaluation game. This is the path for exchangeable search. Search theory helps us describe the arbitrage process. Options is a special case of search theory. Capital and Finance book. Exchangeable search - real options.
+    - Interpret de finetti as catallactic theory. 
+    - Work forward from the binomial model forward to figlewski. 
+    - Savage Axioms. 
+    - Pennachi - chapter 4 is important. Probably need all of it. 5 need, neoclassical search theory. read this with Brandimarte chapter 10. High's price search is the working model. Keep Wald in mind. Sequential problem. Sequential vs. differential equation? How those fit? De finetti creates math from econmic argument. All of rL is search theory. All of Wald's sequential testing stuff is search theory. 
+    - Arbitrage is in all these markets. All economics is resource economics? truck barter and exchange. More markets, more contracts, more exchange. Unleash human potential for truck barter and exchange. Arbitrage. Difference in definition is in the institutional setting. 
+    
+   - ductchbook is ledger theory of accounting
+   
+   
+   Questions this section needs to answer:
+   
+    What is Bruno de Finetti's subjective derivation of probability? 
+    - Subjectivist philosophy
+    - Actual derivation and mapping of prevision to probability 
+    - Exchangeability 
+        - Maths
+        - philosophy
+    - dutchbook theorem
+        
+   Why is it catallactic? 
+   - Arbitrage and relationship to maths and philosophy driving the maths 
+   
+   What does Mises mean when he says prices are an "aid to the mind"?
+   - Where does he say this? 
+   - Prices are the information we use to coordinate plans - economic calculation
+   
+   What is the Walrasian vs. Mengerian view of price? 
+   - Read this in Horowitz
+   
+   Why do we care about the social ontology of number? 
+   - Have written about this
+   
+   * What does social ontology of number have to do with Lad 2-4?
+   - Have written on this
+   
+   What is the dutchbook theorem and how is it related to Misesian economic calculation? 
+   - This should follow from definitions above
+   
+   How does exchangeability relate to Hayekian knowledge & coordination problems? 
+   - Exchangeability allows you to say you are uncertain and get Bayes involved so we can talk about learning. 
+   
+   How do Mises-Hayek provide the price-theoretic microfoundations for de Finetti? 
+   - Mises-Hayek theory of price is about economic calculation, coordination, and emergent order. de Finetti uses prices to map prevision to probability. 
+   
+   
+   Gray areas:
+   - How prices are used to elicit subjective probabilities
+   - Dutchbook theoreom
+    
+    - Generate artifact and questions and then solve problems at the whiteboard.
+    
+    
+    - Lad ch 2, Brandimarte 10 & Pennachi chapter 5, McCall ch1. 
+    - Exchangeability
+    - captial market?
+    - Push artifacts so he can see it. 
+    
+    
+    - What's your view of what we're trying to do and how these fit together
+    - what's the best way to tackle this
+    
+    
+    Friday notes:
+    - we don't need to engage in metphysics to the level Harper is and start fights when we can make more modest claims. How do we establish Bruno de Finetti as a Catallacticist using number stuff. 
+    - Need at least one rational actor, one entrepreneur as market maker as institution maker. Arbitrage is what gets prices to their coordinating role, arbitrage and a few rational actor. 
+    - Money is the way we express subjective value. Number is cardinality. 
+    - Bernardo & Smith 1994 now our probability?
+    - Approach: is this right? Its good for now see if something better. 
+    - check out de finetti 2?
+    - get there from scoring rules instead of dutchbook. What is a scoring rule... Gets you countable infinity, but philosophically motivated still. Then we can use continuous functions and limits and stufff. 
+    - only need the arbitrageur to be coherent. 
+    - institutions force people to behave as if they are rational. 
+    - Minimal amount of rationality needed for positive model
+    - The models they are using can't answer the questions you are trying to ask in the first place.
+    - Moving on to Vives, something about stuff. Objectively true data generating process. This is better than testfastion. Also here is Sheffron reading on rational expectations. 
+    - What is X in measure theory that isn't x 
+   
+   - go back to section outline, read draft, establish bounds, write something I guess.
+   -  
+    
+    
+    
+    
+    
+    
+    
