@@ -64,7 +64,7 @@ I suggest a terminology shift from ‘trinity’ to ‘triad’ to avoid confusi
 - @FiglewskiJFM2017
 
 
-# Comupational Statistical Catallactics
+# Computational Statistical Catallactics
 
 \newpage
 
