@@ -9,13 +9,23 @@ We know that de Finetti's Theory of Prevision is equivalent to the Fundamental T
 
 Like modern finance, modern marketing is beholden to neoclassical economics. However, unlike modern finance, modern marketing naturally sits at the intersection of market microstructure in economics and pyschology. Arguably, even more than finance, marketing should be deeply connected to subjective probability, Misesian valuation, and the Hayekian knowledge problem. In fact, marketing is already dominated by subjective probability but typically only to explain heterogeneity in consumer behavior.
 
+- Market microstructure is split between Bayesian Nash equilibrium and "noisy" rational expectations
+
 ## Probabilities, Prices, and Preferences
 
 Modern marketing relies on structural microeconomic models of demand and thus on utility maximization and rational expectations. However, these models are employed to understand individual-level consumer data, so are naturally at the level of the market's microstructure. Dealing with individual-level consumer choices means that marketing models don't rely exclusively on price to transmit knowledge. Other attributes of products and services are important, but especially brand. That said, individual-level preferences may only be stable with respect to a consumer's willingness-to-pay (WTP). So while preferences may be accounted for across a vareity of attributes, they only remain stable with respect to price. Is this "Fundamental Theory of WTP" the marketing equivalent of the Fundamental Theorem of Asset Pricing and thus de Finetti's Theory of Prevision? If so, preferences (i.e., WTP) = prices = probabilities.
 
-## Sequential Search and Bounded Rationality
+- In finance, prices are first probabilities (from an "objective" DGP)
+- For de Finetti, probabilities are first prices (from a subjective DGP)
+- For marketing, aren't preferences first prices?
+
+## Disequlibrium, Sequential Search, and Bounded Rationality
 
 Detail the connections between sequential search and bounded rationality and how this can be operationalized using agent-based modeling.
+
+- Bayesian Nash equilibrium is "Bayesians in the Economy"
+- Just like probability doesn't exist, equilibrium similarly doesn't exist
+- Rational expectations equilibrium is a likelihood function (as in an "objective" DGP)
 
 ## Questions
 
