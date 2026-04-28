@@ -5,31 +5,27 @@ format: html
 
 ## Introduction
 
-We know that de Finetti's Theory of Prevision is equivalent to the Fundamental Theorem of Asset Pricing, but what does that mean for marketing? What is the connection between marketing and market microstructure?
+In *Bayesians in the Catallaxy*, we spend a great deal of time connecting Mises and Hayek to de Finetti and modern finance. For example, we demonstrate that de Finetti's Fundamental Theory of Prevision is equivalent to the Fundamental Theorem of Asset Pricing. However, this market-making, entrepreneurial-focused, supply-side story says nothing about consumer demand. Certainly there is no market without a market-maker, but there is also no consumption without consumers. What is the connection between marketing and market microstructure?
 
-Like modern finance, modern marketing is beholden to neoclassical economics. However, unlike modern finance, modern marketing naturally sits at the intersection of market microstructure in economics and pyschology. Arguably, even more than finance, marketing should be deeply connected to subjective probability, Misesian valuation, and the Hayekian knowledge problem. In fact, marketing is already dominated by subjective probability but typically only to explain heterogeneity in consumer behavior.
+Market microstructure is the study of how exchange occurs in financial markets. It is dominated by rational expectation equilibrium models where the market is in equilibrium and all agents are rational Bayesians except that information is asymmetric due to strategic behavior or "noisy" prices (i.e., "Bayesians in the Economy"). Marketing is the study of how exchange occurs in consumer markets. It is also beholden to neoclassical economics in the form of microeconomic models of demand that depend on rational expectations and utility maximization where consumers heterogeneously trade-off the prices and perceived quality of different goods and services.
 
-- Market microstructure is split between Bayesian Nash equilibrium and "noisy" rational expectations
+Marketing and market microstructure are separately connected to Misesian valuation, the Hayekian knowledge problem, and subjective probability, albeit in different types of exchange. In order to explore the connection between marketing and market microstructure, we need to start with the primitives and then consider theories that may serve as common foundations before attempting to produce a unified theory of exchange.
 
-## Probabilities, Prices, and Preferences
+## Prices, Preferences, and Probabilities
 
-Modern marketing relies on structural microeconomic models of demand and thus on utility maximization and rational expectations. However, these models are employed to understand individual-level consumer data, so are naturally at the level of the market's microstructure. Dealing with individual-level consumer choices means that marketing models don't rely exclusively on price to transmit knowledge. Other attributes of products and services are important, but especially brand. That said, individual-level preferences may only be stable with respect to a consumer's willingness-to-pay (WTP). So while preferences may be accounted for across a vareity of attributes, they only remain stable with respect to price. Is this "Fundamental Theory of WTP" the marketing equivalent of the Fundamental Theorem of Asset Pricing and thus de Finetti's Theory of Prevision? If so, preferences (i.e., WTP) = prices = probabilities.
+In neoclassical market microstructure, prices are first probabilities drawn from a "true" data-generating process. However, for de Finetti's subjective probability, probabilities are first prices drawn from a subjective data-generating process. The equivalent marketing primitive are preferences. However, these preferences may only be stable with respect to a consumer's willingness-to-pay (WTP) and thus more closely connected to prices and de Finetti.
 
-- In finance, prices are first probabilities (from an "objective" DGP)
-- For de Finetti, probabilities are first prices (from a subjective DGP)
-- For marketing, aren't preferences first prices?
+Is this "Fundamental Theory of WTP" the marketing equivalent of the Fundamental Theorem of Asset Pricing and thus de Finetti's Theory of Prevision? If so, preferences (i.e., WTP) = prices = probabilities.
 
-## Disequlibrium, Sequential Search, and Bounded Rationality
-
-Detail the connections between sequential search and bounded rationality and how this can be operationalized using agent-based modeling.
-
-- Bayesian Nash equilibrium is "Bayesians in the Economy"
-- Just like probability doesn't exist, equilibrium similarly doesn't exist
-- Rational expectations equilibrium is a likelihood function (as in an "objective" DGP)
-
-## Questions
-
-- How is demand connected with arbitrage as a foundation?
+- Is WTP a prevision?
 - What is supply-side marketing? Connected to institutional economics?
+
+## Search and Bounded Rationality
+
+Detail the connections between exchangeable search and bounded rationality and how this can be operationalized using agent-based modeling.
+
+- Just like probability doesn't exist, equilibrium doesn't exist
 - How do we go from bounded rationality to real options theory?
+
+## Conclusion
 
