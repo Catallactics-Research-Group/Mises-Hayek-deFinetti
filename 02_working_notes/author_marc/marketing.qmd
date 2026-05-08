@@ -27,5 +27,9 @@ Detail the connections between exchangeable search and bounded rationality and h
 - Just like probability doesn't exist, equilibrium doesn't exist
 - How do we go from bounded rationality to real options theory?
 
+## Simultaneous Demand and Supply
+
+Certainly consumer demand for the underlying asset of an option contributes to how an option is priced.
+
 ## Conclusion
 
