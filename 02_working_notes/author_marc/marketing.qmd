@@ -29,7 +29,10 @@ Detail the connections between exchangeable search and bounded rationality and h
 
 ## Simultaneous Demand and Supply
 
-Certainly consumer demand for the underlying asset of an option contributes to how an option is priced.
+"The fundamental question of option pricing is how much the option is worth at time zero before we know whether the coin toss results in head or tail." (The Binomial No-Arbitrage Pricing Model, p. 3.) Note that this is to set the price of the **option** not the price of the underlying **asset**. The spot price of the asset is assumed to be observable. However, certainly consumer demand for the underlying asset of an option contributes to how an option is priced.
+
+- Are there finance models that simultaneoulsy model demand and supply in order to identify the spot price?
+- Or is the spot price not endogenous to the options pricing model?
 
 ## Conclusion
 
