@@ -1,0 +1,167 @@
+---
+title: "Readings Guide"
+subtitle: "Bayesians in the Catallaxy --- shared reading for all coauthors"
+author: "TJB"
+date: today
+format:
+  pdf:
+    documentclass: scrartcl
+    number-sections: false
+    fontsize: 11pt
+    fontfamily: mathpazo
+    geometry:
+      - top=1in
+      - bottom=1in
+      - left=1in
+      - right=1in
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    number-sections: false
+    theme: none
+    css: style.css
+    minimal: true
+    anchor-sections: true
+    embed-resources: true
+    smooth-scroll: true
+  gfm: default
+bibliography: ../biblio.bib
+link-citations: true
+---
+
+*Re: Bayesians in the Catallaxy: From Mises--Hayek to de Finetti*
+
+## How to use this guide
+
+This document curates the readings that anchor the paper's argument. It is organized in two parts:
+
+1.  A **canonical core** that every coauthor should read first. These are the four texts on which the paper's central claim --- *arbitrage trinitarianism* and the Mises--Hayek--de Finetti synthesis --- most directly rests.
+
+2.  Three **lane-specific sections** mirroring the collaborator briefs in `notes/collaborator-briefs/`. Read your lane after the canonical core. Skim the other two lanes so you know what your collaborators are working with.
+
+
+Entries follow a consistent template: a full **citation**, a paragraph on **why** the reading is on the list, **targeted reading guidance** (what to read closely, what to skim, what to skip), and **questions** to keep in mind as you read. Articles, books, and chapters annotated below are available on the **shared Box drive**; if anything you need is missing there, ask TJB.
+
+References use the citekeys in `biblio.bib` at the repository root; you can cite them in your own writing with `@Citekey`, e.g. `@HayekAER1945`.
+
+\clearpage
+
+## Canonical readings (all coauthors)
+
+The canon is six short pieces that, read in sequence, lay out the paper's epistemic and methodological foundation: Hayek's 1937 statement of the knowledge problem, his 1945 statement of the price system as its answer, Buchanan's 1964 methodological program for studying it, Buchanan's 1979 and 1982 statements of the catallactic and causal-genetic conception of order, and Hayek's 2002 mature statement of competition as a discovery procedure. All six are short --- the longest is twenty-two pages.
+
+### Hayek, "Economics and Knowledge" [@HayekEconomica1937]
+
+**Citation.** Hayek, F. A. (1937). "Economics and Knowledge." *Economica* 4(13): 33--54. \[Available on the shared Box drive.\]
+
+**Why.** Hayek's first full statement of the knowledge problem and his break with the equilibrium tradition he inherited. The article asks the question that defines the rest of his career: not what equilibrium looks like, but how the *coordination* of competing plans is brought about empirically. The paper takes this article as the origin of the causal-genetic tradition we inherit; everything in the canon that follows is a development of it.
+
+**What to read.** All of it; twenty-two pages. Sections II--IV are the load-bearing ones, where Hayek argues that the equilibrium notion is empirically empty unless we have an account of how plans come into coordination through learning.
+
+**Questions.**
+
+-   What does Hayek mean by saying the question of how knowledge is acquired is the central empirical question of social science?
+-   Where in the article does Hayek explicitly reject the inherited Walrasian equilibrium concept? What does he replace it with?
+-   How does the 1937 framing anticipate the more pungent 1945 statement? What is *new* in 1945 that is not already here?
+
+### Hayek, "The Use of Knowledge in Society" [@HayekAER1945]
+
+**Citation.** Hayek, F. A. (1945). "The Use of Knowledge in Society." *American Economic Review* 35(4): 519--530. \[Available on the shared Box drive.\]
+
+**Why.** The cleanest twelve pages in twentieth-century economics, and the home text for the paper's "Hayek pillar." The article states the Hayekian epistemic problem --- that the relevant knowledge is dispersed, contextual, and not given as data to any single mind --- in a form sharp enough that we use it as a touchstone throughout. The paper's claim that exchangeability is the *probabilistic formalization of the Hayekian epistemic condition* turns on a careful reading of this article.
+
+**What to read.** All of it; it is twelve pages. Sections III--V are where Hayek argues that the price system is the mechanism by which dispersed knowledge is mobilized; that is the load-bearing part for our purposes.
+
+**Questions.**
+
+-   In what sense is a price a *signal* rather than a measurement? What is being signaled, and to whom?
+-   Hayek calls the price system "a kind of machinery for registering change, or a system of telecommunications." How literal is this metaphor? What is the machinery actually doing?
+-   Where does Hayek's argument implicitly require agents reasoning under *genuine* uncertainty rather than parametric risk? Mark those passages --- they are the ones that resist Arrow--Debreu/Muth--Radner reduction.
+
+### Buchanan, "What Should Economists Do?" [@BuchananSEJ1964]
+
+**Citation.** Buchanan, J. M. (1964). "What Should Economists Do?" *Southern Economic Journal* 30(3): 213--222. \[Available on the shared Box drive.\]
+
+**Why.** The *locus classicus* of the rejection of "economics-as-engineering." Buchanan argues that the proper object of economic study is not the optimization problem against a known objective function but the *catallactic* process of exchange. This is the methodological program the paper inherits: Hayek tells us what the price mechanism is *doing*; Buchanan tells us what economists should be *studying*. The combination is what makes a catallactic research program intelligible.
+
+**What to read.** All of it; ten pages.
+
+**Questions.**
+
+-   What is Buchanan's distinction between *economy* and *catallactics*? What does it cost to abandon the maximization-against-an-objective framing?
+-   Buchanan rejects the social welfare function as the proper object of economic study. Is his rejection compatible with reading the catallaxy as a *teleological* process oriented toward mutual gain through exchange? (We argue yes; the brief for Lane A asks for the philosophical articulation.)
+-   Where does Buchanan's argument anticipate the move from a *single* objective probability distribution (the "communism of models") to a *population* of coherent subjective ones?
+
+### Buchanan, "Retrospect and Prospect" [@Buchanan1979]
+
+**Citation.** Buchanan, J. M. (1979). "Retrospect and Prospect." Concluding chapter of *What Should Economists Do?* Liberty Fund. \[Available on the shared Box drive.\]
+
+**Why.** The short closing essay of Buchanan's 1979 Liberty Fund collection, written fifteen years after "What Should Economists Do?" Buchanan looks back on the catallactic program he proposed and forward to what is still owed. The piece is unusually candid about what the program is *for* and what kinds of work it asks of economists --- read it as Buchanan's own gloss on the canon.
+
+**What to read.** All of it; under ten pages.
+
+**Questions.**
+
+-   What does Buchanan judge to have been accomplished in the fifteen years since 1964? What does he see as still open?
+-   Where does the essay sharpen the methodological program in ways that "What Should Economists Do?" left implicit?
+
+### Buchanan, "Order Defined in the Process of Its Emergence" [@BuchananLitLib1982]
+
+**Citation.** Buchanan, J. M. (1982). "Order Defined in the Process of Its Emergence." *Literature of Liberty* 5(4): 5--18. \[Available on the shared Box drive.\]
+
+**Why.** A short, sharp statement of the causal-genetic conception of order: the order *is* the process of its emergence, not a destination toward which the process tends. This is the philosophical hinge of the paper. The communism-of-models critique, the rejection of Arrow--Debreu/Muth--Radner as a standard, the de Finettian re-orientation --- all turn on whether one accepts that the catallactic order is defined in its emergence rather than against an external benchmark. Read this essay slowly.
+
+**What to read.** All of it; under five pages.
+
+**Questions.**
+
+-   What does Buchanan mean by saying the order is *defined* in the process of its emergence? What kind of definition is this?
+-   If the order has no end-state, what is the right philosophical treatment of its *telos*? (Lane A, question C, depends on this.)
+-   Where does Buchanan's argument leave room for a *quantitative* treatment of the catallactic process? Where does it foreclose one? (The paper's answer is that it leaves room for de Finetti but forecloses Walras.)
+
+### Hayek, "Competition as a Discovery Procedure" [@HayekQJAE2002]
+
+**Citation.** Hayek, F. A. (2002). "Competition as a Discovery Procedure." *Quarterly Journal of Austrian Economics* 5(3): 9--23. \[Translation by Marcellus S. Snow of "Der Wettbewerb als Entdeckungsverfahren," 1968. Available on the shared Box drive.\]
+
+**Why.** Hayek's mature statement of competition as a procedure for discovering facts that no one knows in advance --- and could not, in principle, know in advance. The paper's claim that price formation is a knowledge-discovery process rather than an equilibrium-revealing one rests directly on this article. Read it as the third panel of the Hayek triptych (1937 frames the problem; 1945 sketches the answer; 2002 says what the answer means *methodologically*).
+
+**What to read.** All of it; fifteen pages.
+
+**Questions.**
+
+-   In what precise sense does competition *discover* facts? Discovers them for whom, and how are they registered?
+-   Hayek argues that any test of competition's effectiveness must compare it not against an unattainable ideal but against the alternatives we actually have. How does this argument bear on the paper's rejection of Arrow--Debreu/Muth--Radner as a *standard* against which real markets are judged deficient?
+-   Where does Hayek's argument require agents reasoning under *genuine* uncertainty? What would have to be true for the argument to survive a collapse of uncertainty into parametric risk? (Nothing, we think --- but the argument needs to be made carefully.)
+
+\clearpage
+
+## Lane A --- Philosophical groundwork (Brittany Oakes & Michael Otteson)
+
+Brief: `notes/collaborator-briefs/brittany-michael-brief.qmd`. Your questions are A (mathematical social ontology of the price mechanism), B (temporal structure of catallactic action), C (causal-genetic structure and telos of exchange), D (the status of formalization).
+
+*Lane A readings will be added incrementally.*
+
+\clearpage
+
+## Lane B --- Mathematical foundations (Erin Beckman & Emmy Heywood)
+
+Brief: `notes/collaborator-briefs/erin-emmy-brief.qmd`. The questions are A (formalizing the Misesian-appraisement / de Finettian-prevision bridge), B (exchangeability as the formal expression of the Hayekian epistemic condition), C (endogenous stochasticity and interacting subjective Bayesians), D (exchangeable search and the option/search isomorphism), E (existing-vs-new math accounting).
+
+*Lane B readings will be added incrementally.*
+
+\clearpage
+
+## Lane C --- Computational statistical catallactics (Jake Gunther & Marc Dotson)
+
+Brief: `notes/collaborator-briefs/jake-marc-brief.qmd`. The questions are A (read and summarize the literature), B (reframe ACE as already on the way to CSC), C (Bayesian agent-based models --- Marc's anchor), D (computational and signals-processing infrastructure --- Jake's anchor), E (strengthen the options-markets proof-of-concept).
+
+*Lane C readings will be added incrementally.*
+
+\clearpage
+
+## Logistics
+
+-   The bibliography is `biblio.bib` at the repository root. Cite with `@Citekey` --- e.g. `@HayekAER1945` renders as @HayekAER1945.
+-   Articles, books, and chapters are available on the **shared Box drive**. If anything you need is missing there, ask TJB and it will be added.
+-   This guide is a living document. If you find a reading that should be on the canonical core, or that displaces one already there, raise it.

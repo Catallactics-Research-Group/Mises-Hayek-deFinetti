@@ -1,0 +1,61 @@
+---
+title: "Philosophical Groundwork for Arbitrage Trinitarianism"
+subtitle: "Brief for Brittany Oakes & Michael Otteson"
+author: "TJB"
+date: today
+format:
+  pdf:
+    documentclass: scrartcl
+    number-sections: false
+    fontsize: 11pt
+    fontfamily: mathpazo
+    geometry:
+      - top=1in
+      - bottom=1in
+      - left=1in
+      - right=1in
+  gfm: default
+---
+
+*Re: Bayesians in the Catallaxy: From Mises--Hayek to de Finetti*
+
+## Framing
+
+The paper argues that the price mechanism is a *socially real quantitative process* --- and that the dominant traditions in economics have failed to study it as such. The mainstream replaces the process with a fictitious "communism of models," in which all agents share a single objective probability distribution and arbitrage cannot do its work. The Austrians (Mises, Hayek) correctly identify the deep causal structure of price formation as an entrepreneurial, knowledge-discovery process --- but they have never formalized it, and have largely resisted the very idea that it admits of formalization. Our claim is that the catallaxy *requires* a quantitative treatment by its own nature, and that de Finetti's operational subjective probability supplies the missing bridge.
+
+Before that bridge can be built, however, several philosophical questions must be answered carefully --- questions that lie squarely within philosophy of science and social ontology, and on which the paper's economic argument depends. We are inviting you to address them.
+
+## The philosophical questions
+
+### A. Mathematical social ontology of the price mechanism
+
+- In what sense is a market price a *socially real* object? Not a measurement of an underlying physical quantity, not a mere convention, not the projection of an individual mental state.
+- What kind of entity is a price such that it can simultaneously (i) be the act of an individual entrepreneur's appraisement, (ii) function as Hayek's "aid to the mind" coordinating dispersed knowledge, and (iii) admit a quantitative, operational treatment in the sense of de Finetti?
+- What is the right framework for the ontology of *processes* (rather than substances) that are at once social, real, and quantitative? Searle, Tuomela, the social-ontology literature; but also: where do those frameworks fall short for *quantitative* social objects, where the numerical structure is not incidental but constitutive?
+
+### B. The temporal structure of catallactic action *(natural anchor for Brittany)*
+
+- Action is irreducibly forward-directed: the entrepreneur acts in the present on a subjective appraisement of an open future. How should the philosophy of time treat a quantitative process whose every datum (a price) is a record of past action and a guide to future action?
+- De Finetti's *prevision* is foresight, not measurement of an external frequency. What is the right philosophical treatment of prevision as a temporal act?
+- How does this differ from the implicit philosophy of time in rational-expectations equilibrium, where past, present, and future are all collapsed into a single timeless probability distribution? The "communism of models" has a hidden philosophy of time worth excavating.
+
+### C. Causal-genetic structure and the telos of exchange
+
+- The Austrian tradition has long thought of spontaneous order in terms of *causal-genetic* (or *genetic-causal*) processes --- explanation by way of how an institution or pattern comes to be, not by way of correspondence to an equilibrium endpoint. What philosophical resources are most useful for treating the price mechanism as a causal-genetic process: a process whose explanation lies in its mode of generation rather than in any final state?
+- Is there a coherent way to read the catallaxy as a teleological process *without* reintroducing the optimizing engineer that Buchanan rejects? (We think yes --- the *telos* is mutual gain through exchange, not optimization against a known objective function --- but the argument needs careful philosophical articulation.)
+- What is the right philosophical treatment of the entrepreneur's exercise of judgment under genuine uncertainty? Misesian appraisement is an act of practical judgment, not a calculation against a known objective function. We are leaving open which philosophical resources you bring to bear on this --- the question is yours to develop.
+
+### D. The status of formalization itself
+
+- Austrians have resisted formalization on principled epistemic grounds. The paper claims this resistance was *partly* right (against the Walrasian/Arrow-Debreu kind) and *partly* wrong (against any quantitative treatment whatsoever). What philosophical resources adjudicate when formalization illuminates a process and when it falsifies it? This is a question in the philosophy of mathematical modeling --- and the right answer matters for the paper's whole methodological program.
+
+## What we are not asking
+
+Within the four questions above, please bring whatever philosophical resources you find most useful. The constraints below concern scope, not philosophical method:
+
+- Re-examine the economic thesis itself --- arbitrage trinitarianism, the Mises--Hayek--de Finetti synthesis, the critique of Arrow--Debreu/Muth--Radner. That is the paper's economic argument; the philosophical work serves it rather than the other way around.
+- Take on the mathematical content of de Finetti's representation theorem, the Fundamental Theorem of Asset Pricing, or exchangeable search theory.
+
+## Suggested deliverable
+
+A 3--5 page memo organized around questions A--D, with each of you taking principal responsibility for the section that fits your training (Brittany on B, Michael on C, jointly on A and D). The memo will become source material for the introduction and methodology sections; we are not asking you to draft those sections directly.
