@@ -1,12 +1,11 @@
 .PHONY: render clean help
 
-QMD_FILES := brittany-michael-brief.qmd erin-emmy-brief.qmd jake-marc-brief.qmd
+QMD_FILES := $(wildcard *.qmd)
 PDF_FILES := $(QMD_FILES:.qmd=.pdf)
 MD_FILES  := $(QMD_FILES:.qmd=.md)
 
 # Each `quarto render` produces both a PDF and a GFM markdown file
-# from the same .qmd source. We track .pdf as the primary artifact;
-# the .md is generated alongside as a side effect.
+# from the same .qmd source.
 
 render: $(PDF_FILES)
 
@@ -22,6 +21,6 @@ help:
 	@echo "Each render produces both PDF and GitHub-flavored Markdown."
 	@echo ""
 	@echo "Targets:"
-	@echo "  render  Render all three briefs (default; produces .pdf and .md)"
+	@echo "  render  Render all .qmd files in this directory"
 	@echo "  clean   Remove generated PDFs and Markdown files"
 	@echo "  help    Show this help message"

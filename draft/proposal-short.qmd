@@ -1,0 +1,222 @@
+---
+title: "Bayesians in the Catallaxy"
+subtitle: "From Mises-Hayek to de Finetti"
+author: "Tyler J. Brough"
+date: today
+format:
+  pdf:
+    documentclass: scrartcl
+    number-sections: false
+    fontsize: 12pt
+    fontfamily: mathpazo
+    geometry:
+      - top=0.5in
+      - bottom=0.5in
+      - left=0.75in
+      - right=0.75in
+    include-in-header:
+      text: |
+        \newcommand{\epigraph}[2]{%
+          \vspace{1em}%
+          \begin{flushright}%
+            \begin{minipage}{0.85\textwidth}%
+              \small\itshape #1\par\smallskip%
+              \hfill\textit{---#2}%
+            \end{minipage}%
+          \end{flushright}%
+          \vspace{1em}%
+        }
+abstract: |
+  The Journal of Economic Perspectives describes its scholarly mission as providing
+  "intellectual arbitrage" for economists. Arbitrage deserves this central place not
+  merely as metaphor but as a unifying scientific principle. Three research programs have
+  independently built their foundations upon arbitrage --- Austrian catallactics in
+  the tradition of Mises and Hayek, Bruno de Finetti's operational subjective
+  probability theory, and modern finance --- yet have developed in near-complete
+  isolation. A synoptic reading of all three, which we call *arbitrage
+  trinitarianism*, generates insights none could achieve alone.
+
+  The first insight is that de Finetti is the forgotten Austrian economist. Born in
+  Innsbruck and building on Mengerian price theory, his Fundamental Theorem of
+  Prevision is mathematically identical to the Fundamental Theorem of Asset Pricing,
+  providing the operational foundation for the price mechanism that Mises and Hayek
+  sought but could not formalize. The second is that Arrow-Debreu and Muth-Radner
+  together constitute a "communism of models" in which arbitrage cannot do its work
+  by construction, rendering the no-trade theorems and the Grossman-Stiglitz paradox
+  tautological rather than puzzling. The third is that exchangeable search is the
+  proper microfoundation of market processes, and that financial options theory ---
+  widely regarded as the most predictively successful theory in economics --- is a
+  highly institutionalized special case of a more general catallactic search theory.
+
+  We propose *computational statistical catallactics*, grounded in Mises-Hayek-de
+  Finetti microfoundations, as a new research program, with options markets as the
+  natural proof of concept, where endogenous stochasticity from individual
+  subjective uncertainty replaces the exogenous probability structures of existing
+  models.
+---
+
+\epigraph{There has been a tremendous neglect of the notion of \ldots{} emergent choice; that we don't really have before us objects among which to choose. We create them in the act of choice\ldots{} \textbf{Arbitrage really has not become central to economics like it should be.}}{James M. Buchanan}
+
+# Introduction
+
+Nobel laureate James M. Buchanan declared that arbitrage should be central to economics --- and that it is not. This paper makes it so.
+
+In his 1979 book "What Should Economists Do?", Buchanan was unambiguous:
+
+> **"Economics is about arbitrage.** *The behavioral paradigm central to economics is that of the trader whose Smithean propensity to truck and barter locates and creates opportunities for mutual gains. This paradigm is contrasted with that of the maximizing engineer who allocates scarce resources among alternatives.... the maximization paradigm is the fatal methodological flaw in modern economics."*
+
+We take Buchanan at his word and discover something striking: arbitrage is not only the proper object of economics but also the proper method for studying it. Three research programs --- Austrian catallactics, de Finetti's subjective probability theory, and modern finance --- have independently built their foundations on arbitrage but have not recognized one another as kindred. We call the synoptic reading of all three *arbitrage trinitarianism*: a literal intellectual triangular arbitrage in which the strategy and the object of study coincide. Section 2 develops the three principal insights. Section 3 proposes *computational statistical catallactics* as the methodology that makes the framework empirically operational.
+
+
+# The Triangular Arbitrage Insights
+
+## Bruno de Finetti: The Forgotten Austrian Economist
+
+The first profound insight from arbitrage trinitarianism concerns Bruno de Finetti.
+De Finetti was born in Innsbruck in 1906, and Austria is not merely his birthplace
+but the intellectual foundation of his probability theory. De Finetti scholars have
+recognized that his was an economic derivation of the axioms of probability
+[@Pressacco2009; @NauTD2001]. He used the notation $Pr$ to mean *Probability*,
+*Price*, and *Prevision* (foresight) interchangeably. His theory presupposes a
+microeconomic theory of price, and that price theory is necessarily Mengerian, not
+Walrasian [@Horwitz2000; @Thomsen1992]. His is a *catallactic theory of
+probability*, grounded in monetary economic calculation, resting on the same
+Misesian microfoundations as Austrian catallactics [@HorwitzRAE2004; @Mises2009].
+Mises and de Finetti stand on the same catallactic ground in recognizing money
+prices as an "aid to the mind."
+
+The Dutch book argument (DBA) [@Vineberg2022] at the heart of de Finetti's framework is itself a
+theorem of *no-arbitrage* at the individual level: it defines rational behavior as a
+coherent plan from which no counterparty can extract a sure profit. De Finetti was
+as thoroughly subjectivist as any Austrian, and his concerns with epistemology and
+subjective knowledge are identical to those of @Hayek1948. His *Fundamental Theorem
+of Prevision* is mathematically identical to the *Fundamental Theorem of Asset
+Pricing* [@Nau1999; @NauTD2001; @Nau2025]. De Finetti provides, at the level of the
+individual agent, exactly the operational quantitative foundation for the price
+mechanism that Mises and Hayek sought at the level of the market but could not
+formalize. By every relevant criterion --- birthplace, intellectual lineage,
+methodological commitments, mathematical results --- de Finetti is the forgotten
+Austrian economist.
+
+Exchangeability --- de Finetti's concept whereby an agent judges a sequence of
+observable quantities to be invariant in probability to permutation --- is the
+probabilistic formalization of the Hayekian epistemic condition. An agent whose
+probability assessments over a sequence are exchangeable does not presuppose a known
+data-generating process. She treats outcomes as conditionally interchangeable given
+her current state of belief, and revises that belief through Bayesian updating as
+prices and transactions reveal dispersed information. Exchangeability is what
+rational belief looks like when probability does not exist outside of human minds.
+
+
+## The Communism of Models
+
+The second insight concerns the foundational failures of the dominant modeling
+paradigm. Arrow-Debreu and Muth-Radner together constitute what Thomas Sargent has properly called a *"communism
+of models"* [@EvansHonkapohjaMD2005]. As Sargent has observed, a rational expectations
+equilibrium is, at its core, a joint probability density over sequences of states ---
+a single probability model shared by "all agents inside the model, the econometrician, and God." All
+agents know the true data-generating process, either by assumption or by convergence.
+Adrian Smith [-@SmithJRSS1984] applied the same critique to shared-prior Bayesianism
+in scientific reasoning, naming it aptly: a "totalitarian parody." The label fits
+the rational expectations equilibrium with equal force --- conformity to a single
+probability model is enforced by the logic of equilibrium itself. Frank Knight's parallel observation is
+exact: in perfect competition there is no competition; in a communism of models,
+there is no arbitrage.
+
+The consequences are severe. @DubeyEtAlJME1987 establish that there is no mechanism
+by which information can genuinely "get into prices" in a rational expectations
+equilibrium: the common knowledge assumption simply assumes the conclusion.
+Market microstructure asks Mengerian questions about price formation but with
+Walrasian tools, and obtains the no-trade theorems as its answer. The profession has
+fixated on the equity premium puzzle, but the deeper puzzle is what is properly called the *equity volume
+puzzle*: if theory predicts no trade, why is there so much of it? We do not have
+theoretical models capable of generating even a small fraction of observed trading
+volume. Within the rational expectations framework we never will: the result is not
+a puzzle but a tautology. The Grossman-Stiglitz paradox is equally no paradox: in a
+communism of models, arbitrage cannot do its work by construction. The solution is
+to replace Arrow-Debreu and Muth-Radner with Mises, Hayek, and de Finetti.
+
+
+## Entrepreneurial Economic Calculation as Exchangeable Search
+
+The third insight concerns the relationship between entrepreneurial discovery and
+modern finance. It has long been suspected that Kirznerian entrepreneurship,
+coherently specified, collapses into a theory of sequential search
+[@CowenRAE2003; @CaplanSEJ1999]. We see this as a feature, not a bug. The decisive step came
+when @McCallJEDC1991 and @McCallMcCall2014 introduced *exchangeable search*:
+sequential search in which the agent judges the distribution of opportunities to be
+exchangeable in de Finetti's sense rather than drawn from a known distribution. Exchangeable search is a
+catallactic theory, modeling the entrepreneurial agent confronting genuine Hayekian
+uncertainty and acting on coherent subjective appraisements rather than actuarial
+calculation.
+
+The sequential job search model [@McCall1970] is mathematically equivalent to a perpetual American
+call option [@ChristensenKiefer2009]. Most of the literature exploits this
+isomorphism by importing options mathematics into search theory. The direction of
+dependence in fact runs the other way: financial options theory is a highly
+institutionalized special case of a more general catallactic search theory.
+@RossNP1989 has called options theory the most predictively successful theory in
+all of economics. That claim cannot be rightly made for job search theory, yet both share
+identical mathematical structure. The mathematical structure is therefore not doing
+the empirical heavy lifting. What options markets have, and labor markets largely lack, is an
+extraordinarily rich institutional scaffolding --- exchanges, market-makers,
+standardized contracts, clearinghouses, centralized electronic limit order books, and high-speed communication networks. 
+It is the institutions, not the equations, that generate the observed efficiencies. The microfoundations of options theory are
+catallactic --- that is what makes the theory work where institutions are rich and
+fail where they are thin [@Clark1997].
+
+@LewinCachanosky2020 establish that Mises's capital theory is at root a financial
+theory of capital. We bridge from this recognition to the exchangeable real options
+framework: properly rebuilt on Mises-Hayek-de Finetti microfoundations, Austrian
+capital theory becomes *investment under genuine uncertainty* --- not the parametric
+risk of @DixitPindyck1994, but Knight-Keynes uncertainty operationalized through de
+Finetti.
+
+
+# Computational Statistical Catallactics
+
+These three insights reorient theory; they do not, by themselves, supply a method.
+
+Agent-based computational economics (ACE) is a method in search of a theory [@TesfatsionJEM2017].
+Austrian catallactics is a theory in search of a method. *Computational statistical
+catallactics* resolves this impasse by supplying each with what it lacks, united by
+a single crucial insight: *stochasticity is endogenous*.
+
+In the standard modeling paradigm, randomness enters from outside. There is an
+objective probability distribution --- a true data-generating process --- from which
+outcomes are drawn. De Finetti's declaration that *PROBABILITY DOES NOT EXIST* is a
+direct repudiation [@DeFinetti2017]. Probability is not a feature of the world; it is a property of
+an agent's beliefs. The stochasticity we observe in market outcomes is therefore not
+the realization of an external process: it is the aggregate consequence of many
+individual agents acting under genuine uncertainty. A system of equations
+presupposes a closed probability structure, but in the catallaxy that structure is
+precisely what needs to be explained. Simulation is not a computational convenience
+--- it is the only scientific tool adequate to the problem.
+
+Standard ACE agents are given probability distributions and learning rules from
+outside. De Finetti provides something fundamentally different: a principled,
+operational theory of subjective belief in which coherence (no Dutch book) is the
+foundational rationality criterion, Bayesian updating is a theorem rather than an
+assumption, and exchangeability bridges individual uncertainty and observed market
+patterns. Catallactics supplies the institutional and entrepreneurial logic of what
+agents are *doing*; de Finetti supplies the formal logic of what they are
+*believing* and *predicting*. Each tradition needed the other. Neither has yet recognized it.
+
+We propose applying this framework to options markets as the natural proof of
+concept. Building upon @FiglewskiJF1989, we model the options
+market-maker as a Misesian entrepreneur embedded in a catallactic market process. The
+key methodological move is to replace Arrow-Debreu and Muth-Radner probability foundations with
+Mises-Hayek-de Finetti microfoundations: each market participant holds de Finettian
+subjective beliefs, acts coherently, and revises beliefs through Bayesian
+exchangeable updating as prices reveal dispersed information. Option prices emerge
+from the interaction of subjective beliefs within institutional constraints --- they
+are not the result of *synthetic replication* but of *synthetic generation*, the
+spontaneous product of the catallaxy. Full computational implementation is reserved
+for subsequent research. The framework's reach extends to every market in which
+dispersed knowledge becomes price --- which is to say, to economic calculation
+itself.
+
+
+\newpage
+
+# References
