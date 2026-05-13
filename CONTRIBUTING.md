@@ -6,8 +6,7 @@ It contains exploratory notes, lane drafts, and curated project artifacts.
 ## Where to put things
 
 - draft/
-  The manuscript-in-progress. Currently `proposal-short.qmd` (the JEP-targeted version)
-  and `rae_intro.md`. The biblio (`biblio.bib`) lives alongside.
+  The manuscript-in-progress. Currently `proposal-short.qmd` (the JEP-targeted version). The biblio (`biblio.bib`) lives alongside.
 
 - philosophical/ , mathematical/ , computational/
   Three topical lanes. Each holds a collaborator brief and any prose/notes that
