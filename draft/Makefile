@@ -1,10 +1,10 @@
 .PHONY: all pdf html clean help
 
 # Variables
-QMD = proposal.qmd
+QMD = proposal-short.qmd
 BIB = biblio.bib
-PDF = proposal.pdf
-HTML = proposal.html
+PDF = proposal-short.pdf
+HTML = proposal-short.html
 
 # Default target
 all: pdf html
@@ -20,8 +20,8 @@ $(HTML): $(QMD) $(BIB)
 	quarto render $(QMD) --to html
 
 clean:
-	@rm -f $(PDF) $(HTML) proposal.log
-	@rm -rf proposal_files
+	@rm -f $(PDF) $(HTML) proposal-short.log
+	@rm -rf proposal-short_files
 
 help:
 	@echo "Usage: make [target]"
@@ -30,4 +30,3 @@ help:
 	@echo "  html   - Build HTML."
 	@echo "  clean  - Remove generated files."
 	@echo "  help   - Show this help message."
-

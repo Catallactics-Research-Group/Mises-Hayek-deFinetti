@@ -7,28 +7,29 @@ This repository supports an interdisciplinary research project. The goal is lite
 
 ## Repository organization
 
-The repository is organized to support exploratory work, draft writing, and eventual
-integration into a single manuscript.
+The repository is organized as one draft directory plus three topical lanes, with
+supporting directories around them.
 
-- `00_project_meta/`  
-  Project-level artifacts (scope, proposals, shared decisions).
+- `draft/`
+  The manuscript-in-progress (`proposal-short.qmd`, `rae_intro.md`) and its bibliography.
 
-- `01_sources/`  
+- `philosophical/` , `mathematical/` , `computational/`
+  Three topical lanes. Each holds a collaborator brief plus prose/notes that develop
+  the lane.
+
+- `project_meta/`
+  Project-level artifacts (scope, outline, timeline, shared decisions).
+
+- `sources/`
   Bibliography and source notes.
 
-- `02_working_notes/`  
-  Exploratory notes, brainstorms, outlines, and fragments.
+- `working_notes/`
+  Exploratory notes, brainstorms, outlines, and fragments. Author folders welcome.
 
-- `03_section_drafts/`  
-  Draft text intended to become part of the paper (organized by section).
-
-- `04_integrated_draft/`  
-  Reserved for the curated integrated manuscript (once sections are merged).
-
-- `05_appendices/`  
+- `appendices/`
   Technical details, extended examples, and background material.
 
-- `06_archive/`  
+- `archive/`
   Archived or legacy material kept for reference.
 
 See `CONTRIBUTING.md` for guidance on where to place new work and editing norms.
@@ -38,6 +39,6 @@ See `CONTRIBUTING.md` for guidance on where to place new work and editing norms.
 Folders related to earlier project templates (e.g. code, data, figures, writing scaffolds)
 have been moved to:
 
-`06_archive/legacy_structure/`
+`archive/legacy_structure/`
 
 These are retained for reference but are not part of the active workflow.

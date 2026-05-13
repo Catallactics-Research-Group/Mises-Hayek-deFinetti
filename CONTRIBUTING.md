@@ -1,47 +1,48 @@
 # Contributing
 
 This repository supports an interdisciplinary research project (literature synthesis + writing).
-It contains exploratory notes, section drafts, and curated project artifacts.
+It contains exploratory notes, lane drafts, and curated project artifacts.
 
 ## Where to put things
 
-- 00_project_meta/
-  Project-level artifacts: scope, research questions, proposal materials, decisions.
+- draft/
+  The manuscript-in-progress. Currently `proposal-short.qmd` (the JEP-targeted version)
+  and `rae_intro.md`. The biblio (`biblio.bib`) lives alongside.
 
-- 01_sources/
+- philosophical/ , mathematical/ , computational/
+  Three topical lanes. Each holds a collaborator brief and any prose/notes that
+  develop that lane. Move work here from `working_notes/` once it has shape.
+
+- project_meta/
+  Project-level artifacts: scope, research questions, outline, timeline, decisions.
+
+- sources/
   Bibliography and source notes (summaries, quotes with citations, reading notes).
 
-- 02_working_notes/
+- working_notes/
   Low-stakes exploratory work: brainstorms, rough notes, outlines, fragments.
   Personal author folders are welcome.
 
-- 03_section_drafts/
-  Draft text intended to become part of the paper (by section).
-  Multiple competing drafts are OK.
-
-- 04_integrated_draft/
-  Curated integrated manuscript (only when we begin merging sections).
-
-- 05_appendices/
+- appendices/
   Material that is rigorous/useful but too detailed for the main narrative
   (formal derivations, extended examples, background).
 
-- 06_archive/
+- archive/
   Old/unused drafts kept for reference. Nothing gets deleted, just retired.
 
 ## Editing norms (lightweight)
 
 - Safe to edit freely:
-  - 02_working_notes/
-  - 01_sources/source_notes/
-  - 03_section_drafts/
+  - working_notes/
+  - sources/source_notes/
+  - philosophical/ , mathematical/ , computational/
 
 - Please use a pull request for:
-  - 00_project_meta/ (project commitments affect everyone)
-  - 04_integrated_draft/ (when populated)
+  - project_meta/ (project commitments affect everyone)
+  - draft/ (the manuscript)
 
 ## Style notes
 
 - Rough prose is fine in working notes.
 - When quoting sources, include page numbers when possible.
-- If unsure where something belongs, default to 02_working_notes/.
+- If unsure where something belongs, default to working_notes/.

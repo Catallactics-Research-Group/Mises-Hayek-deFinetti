@@ -7,4 +7,4 @@ Put:
 - summaries of papers/books
 - BibTeX files
 
-Avoid putting draft prose here (use 03_section_drafts/ for that).
+Avoid putting draft prose here (use a lane directory or `draft/` for that).
