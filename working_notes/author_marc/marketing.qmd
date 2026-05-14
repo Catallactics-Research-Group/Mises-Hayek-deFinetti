@@ -14,19 +14,16 @@ Marketing and market microstructure are separately connected to Misesian valuati
 - Does Buchanan discuss the inability to estimate demand in public choice?
 - Profit-loss analogy in markets for the evaluation game?
 - Sun-Abraham group-level estimates, specifically for event studies?
-- What is a bandwidth in a regression discontinuity design?
-- Purging humans from science results in mechanomorphism
-- "Exact Thinking in Demented Times" for the Vienna Circle, for us
 - The likelihood need not "bite" if we can operationalize institutions
 - Does Greg's wants-and-needs work avoid utility maximization?
 - Disequilibrium theory exposes the causal transmission of knowledge
-- Can Bayesians in the Catallaxy become an Economic Rethinking?
+- Can Bayesians in the Catallaxy be akin to an Economic Rethinking?
 
 ## Prices, Preferences, and Probabilities
 
 In neoclassical market microstructure, prices are first probabilities drawn from a "true" data-generating process. However, for de Finetti's subjective probability, probabilities are first prices drawn from a subjective data-generating process. The equivalent marketing primitive are preferences. These preferences may only be stable with respect to a consumer's willingness-to-pay (WTP) and thus more closely connected to prices and de Finetti.
 
-"[T]he combined assumptions of maximizing behavior, market equilibrium, and stable preferences, used relentlessly and unflinchingly, form the heart of the economic approach as it is." (Gary Becker, *The Economic Approach to Human Behavior*) We contest the fact of a market equilibrium, but not the fact of maximizing behavior or stable preferences. "It is a theoremo of decision theory that any consistent set of preferences can be converted into an ordinal cost scale." (Kevin Murphy, *Probabilistic Machine Learning: An Introduction*)
+"[T]he combined assumptions of maximizing behavior, market equilibrium, and stable preferences, used relentlessly and unflinchingly, form the heart of the economic approach as it is." (Gary Becker, *The Economic Approach to Human Behavior*) We contest the fact of a market equilibrium, but not the fact of maximizing behavior or stable preferences. "It is a theorem of decision theory that any consistent set of preferences can be converted into an ordinal cost scale." (Kevin Murphy, *Probabilistic Machine Learning: An Introduction*)
 
 Is this "Fundamental Theory of WTP" the marketing equivalent of the Fundamental Theorem of Asset Pricing and thus de Finetti's Theory of Prevision? If so, preferences (i.e., WTP) = prices = probabilities.
 
