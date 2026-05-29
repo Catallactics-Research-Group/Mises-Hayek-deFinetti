@@ -51,5 +51,5 @@ In the binomial model, a cattalactic approach would still assume 1. market data 
 ## Agent-Based Modeling
 
 - How does likelihood heterogeneity fit with agent-based modeling?
-- What's the relationship to "empirical risk minimization," "generalized Bayes," and modern "simulation-based inference"?
+- What's the relationship to "empirical risk minimization," (PML p. 190) "generalized Bayes," and modern "simulation-based inference"?
 
