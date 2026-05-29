@@ -29,6 +29,7 @@ Is this "Fundamental Theory of WTP" the marketing equivalent of the Fundamental 
 
 - Is WTP a prevision?
 - What is supply-side marketing? Connected to institutional economics?
+- How do constraints fit? Are prices and brands institutions or constraints?
 
 ## Search and Bounded Rationality
 
@@ -36,6 +37,7 @@ Detail the connections between exchangeable search and bounded rationality and h
 
 - Just like probability doesn't exist, equilibrium doesn't exist
 - How do we go from bounded rationality to real options theory?
+- What is the relationship between modeling heuristics and bounded rationality?
 
 ## Simultaneous Demand and Supply
 
@@ -46,5 +48,8 @@ In the binomial model, a cattalactic approach would still assume 1. market data 
 - Are there finance models that simultaneously model demand and supply in order to identify the spot price?
 - Or is the spot price not endogenous to the options pricing model?
 
-## Conclusion
+## Agent-Based Modeling
+
+- How does likelihood heterogeneity fit with agent-based modeling?
+- What's the relationship to "empirical risk minimization," "generalized Bayes," and modern "simulation-based inference"?
 
