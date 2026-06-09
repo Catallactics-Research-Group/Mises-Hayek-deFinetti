@@ -1,0 +1,38 @@
+---
+title: "Bayesian Computation"
+format: html
+bibliography: references.bib
+---
+
+## Introduction
+
+Computational statistical catallactics will, of necessity, build on the shoulders of giants. This note summarizes related work that might enhance our development of the approach.
+
+The focus across these various areas is on the limitations of the three assumptions at the center of "traditional" Bayesian computation:
+
+1. We can specify a likelihood that accurately captures the true data-generation process.
+2. We can specify a prior that accurately captures our prior knowledge in terms of the parameters of the specified likelihood.
+3. We can sample from a posterior.
+
+Note that the way we sample from the posterior is clearly identified here as part of the modeling process and not a separate problem or a foregone conclusion.
+
+## Probabilistic Machine Learning
+
+Start with the published choice symposium paper.
+
+## Simulation-Based Inference
+
+Including amortized Bayesian inference and the use of BayesFlow.
+
+## General Bayesian Inference
+
+A kind of likelihood-free inference, general Bayesian inference [@bissiri_general_2016] uses a loss function instead of a likelihood. As expected, this results in a decidely decision-theoretic approach to inference where the use of a likelihood is a special case.
+
+As with all decision theory, the initial problem becomes specifying the objective function. If the objective function can be specified, the argument is that this is not an approximation but an update directly on the parameters of interest.
+
+Instead of decision theory leading to point estimates, under this approach the reporting of the posterior distribution on the parameter(s) of interest is the action made under uncertainty. This all assumes that there is a true data-generating process and that model misspecification leads to different forms of justified estimation.
+
+## "Post-Bayes"
+
+Post-Bayes consists of non-orthodox estimation procedures, including Bayesian inference as optimization, and provably approximately correct (PAC) Bayes.
+
