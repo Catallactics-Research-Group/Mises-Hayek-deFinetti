@@ -45,6 +45,7 @@ Detail the connections between exchangeable search and bounded rationality and h
 
 In the binomial model, a cattalactic approach would still assume 1. market data and 2. term sheet via institutional structure while relaxing 3. physical probability law (from the equilibrium assumptions) into a subjective probability model with a utility function specific to the option market maker.
 
+- Where and how are hierarchical models used in aggregating?
 - Are there finance models that simultaneously model demand and supply in order to identify the spot price?
 - Or is the spot price not endogenous to the options pricing model?
 
