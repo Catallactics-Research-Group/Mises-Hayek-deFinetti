@@ -16,6 +16,19 @@ The focus across these various areas is on the limitations of the three assumpti
 
 Note that the way we sample from the posterior is clearly identified here as part of the modeling process and not a separate problem or a foregone conclusion.
 
+Some fundamental questions:
+
+- Isn't inference just a special kind of prediction?
+- What kind of uncertainty do we have in a posterior distribution?
+- Does more data always reduce uncertainty? Does that mean uncertainty is about unseen data?
+- How often do we actually experience "posterior collapse"? Is it actually a problem?
+- Do we even care about "model misspecification" from a radical subjectivist perspective?
+- Why does Bayesian predictive performance "falter outside of the narrow conditions" that are somehow optimal?
+- What does it mean to minimize the average scoring rule rathan the score of the averaged model?
+- Doesn't adaptive pooling also provide an improvement in posterior predictive performance?
+- Is this because it reduces the amount of data available for each group?
+- What's the relationship between mixture and multilevel models?
+
 ## Probabilistic Machine Learning
 
 Start with the published choice symposium paper.
@@ -30,9 +43,14 @@ A kind of likelihood-free inference, general Bayesian inference [@bissiri_genera
 
 As with all decision theory, the initial problem becomes specifying the objective function. If the objective function can be specified, the argument is that this is not an approximation but an update directly on the parameters of interest.
 
-Instead of decision theory leading to point estimates, under this approach the reporting of the posterior distribution on the parameter(s) of interest is the action made under uncertainty. This all assumes that there is a true data-generating process and that model misspecification leads to different forms of justified estimation.
+Instead of decision theory leading to point estimates, under this approach the reporting of the posterior distribution on the parameter(s) of interest is the action made under uncertainty. Implied here is that we only need to set a prior(s) on the parameter(s) of interest instead of all of the parameters (including nuisance parameters) from a likelihood.
 
-## "Post-Bayes"
+- Do all uses require the choice of the weighting hyperparameter $w$?
+- Doesn't this all assume there is a true data-generating process and thus model misspecification?
 
-Post-Bayes consists of non-orthodox estimation procedures, including Bayesian inference as optimization, and provably approximately correct (PAC) Bayes.
+## Variational Inference
+
+Turning sampling from a posterior into an optimization problem.
+
+- Where does provably approximately correct (PAC) Bayes fit in?
 
