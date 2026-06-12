@@ -16,19 +16,6 @@ The focus across these various areas is on the limitations of the three assumpti
 
 Note that the way we sample from the posterior is clearly identified here as part of the modeling process and not a separate problem or a foregone conclusion.
 
-Some fundamental questions:
-
-- Isn't inference just a special kind of prediction?
-- What kind of uncertainty do we have in a posterior distribution?
-- Does more data always reduce uncertainty? Does that mean uncertainty is about unseen data?
-- How often do we actually experience "posterior collapse"? Is it actually a problem?
-- Do we even care about "model misspecification" from a radical subjectivist perspective?
-- Why does Bayesian predictive performance "falter outside of the narrow conditions" that are somehow optimal?
-- What does it mean to minimize the average scoring rule rathan the score of the averaged model?
-- Doesn't adaptive pooling also provide an improvement in posterior predictive performance?
-- Is this because it reduces the amount of data available for each group?
-- What's the relationship between mixture and multilevel models?
-
 ## Probabilistic Machine Learning
 
 Start with the published choice symposium paper.
@@ -37,7 +24,7 @@ Start with the published choice symposium paper.
 
 Including amortized Bayesian inference and the use of BayesFlow.
 
-## General Bayesian Inference
+## Generalized Bayesian Inference
 
 A kind of likelihood-free inference, general Bayesian inference [@bissiri_general_2016] uses a loss function instead of a likelihood. As expected, this results in a decidely decision-theoretic approach to inference where the use of a likelihood is a special case.
 
@@ -48,9 +35,44 @@ Instead of decision theory leading to point estimates, under this approach the r
 - Do all uses require the choice of the weighting hyperparameter $w$?
 - Doesn't this all assume there is a true data-generating process and thus model misspecification?
 
-## Variational Inference
+## Generalized Variational Inference
 
 Turning sampling from a posterior into an optimization problem.
 
 - Where does provably approximately correct (PAC) Bayes fit in?
+
+### Predictively Oriented Posteriors
+
+This a generalized variational inference method that computes an approximation of the posterior using the posterior predictive rather than the posterior as the primitive object of interest. It appears to be a recreation of Geweke and Amisano's "Optimal Prediction Pools" and the predictive power of hierarchical models and a rediscovery of de Finetti's approach to model building. However, it's confused with a focus on frequentist and "classical Bayesian" concepts like model misspecification, posterior collapse, and complete model spaces.
+
+Some fundamental **philosophical** and **computational** questions (see *PML* p. 175-176):
+
+- Isn't inference just a special kind of prediction?
+- What kind of uncertainty do we have in a posterior distribution?
+
+Meaningful quantification of uncertainty are those made by individuals (i.e., subjective) about observationals (i.e., objective). (See Smith quote.)
+
+De Finetti started with the posterior predictive distribution and then derived Bayes rule. This suggest we are indeed uncertain about unseen data (i.e., aleatoric or data uncertainty) as it relates to the observables.
+
+- Doesn't the posterior predictive as Bayesian model averaging suggest that the posterior also capture epistemic or model uncertainty?
+- Is "posterior collapse" actually a problem? Does more data always reduce posterior uncertainty?
+
+This is a "classical Bayesian" problem. They're conflating model misspecification and posterior collapse. From a subjective Bayesian, this is a feature, not a bug. IJ Goode talks about no guarantee that more data will lead to posterior collapse. (Tyler can find a quote.) If we observe the "whole population" then probability no longer applies. Posterior collapse being a problem assumes a "complete model space," which is a violation of Cromwell's rule. (See Geweke's "Complete and Incomplete Econometric Models" and Poirer's paper on principals of pragmatic model building.)
+
+- Do we even care about "model misspecification" from a radical subjectivist perspective?
+
+Thinking about "true data generating process" and therefore "model misspecification" is a frequentist consideration. (See 46656 Varieties of Bayesians by IJ Goode.) De Finneti is all about the model as a predictive machine. (See the quote Smith on de Finetti.) The likelihood of is an information transfer function. (See the quote from Ladd.) In other words, in machine learning we don't care about "model misspecification" because we don't care about the "true data generating process." Why are we importing this along with Bayes? Focus on "classical Bayesianism."
+
+- Why does Bayesian predictive performance "falter outside of the narrow conditions" that are somehow optimal?
+
+More of the same.
+
+- What does it mean to minimize the average scoring rule rathan the score of the averaged model?
+
+Is this a rediscovery of Geweke and Amisano's "Optimal prediction pools"? Which is an ensemble model. It's Jensen's inequality which will only be equal if they have a true model. Very de Finetti-like with the posterior predictive being the primitive. Poirier on Exchangeability.
+
+- Doesn't adaptive pooling also provide an improvement in posterior predictive performance?
+- Is this because it reduces the amount of data available for each group?
+- Isn't this some sort of information leakage since we're using the posterior predictive to inform the estimation?
+- What's the relationship between mixture and multilevel models?
 
