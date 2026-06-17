@@ -6,27 +6,19 @@ bibliography: references.bib
 
 ## Introduction
 
-Computational statistical catallactics will, of necessity, build on the shoulders of giants. This note summarizes related work that might enhance our development of the approach.
+Computational statistical catallactics will, of necessity, build on the shoulders of giants. This note summarizes some of the assigned reading plus related work (including "Post-Bayes" **(add links)** papers from a Bayesian computation in marketing reading group) that might enhance our development of the approach.
 
 The focus across these various areas is on the limitations of the three assumptions at the center of "traditional" Bayesian computation:
 
-1. We can specify a likelihood that accurately captures the true data-generation process.
+1. We can specify a likelihood that accurately captures the "true data-generation process."
 2. We can specify a prior that accurately captures our prior knowledge in terms of the parameters of the specified likelihood.
-3. We can sample from a posterior.
+3. We can sample from the posterior.
 
 Note that the way we sample from the posterior is clearly identified here as part of the modeling process and not a separate problem or a foregone conclusion.
 
-## Probabilistic Machine Learning
-
-Start with the published choice symposium paper.
-
-## Simulation-Based Inference
-
-Including amortized Bayesian inference and the use of BayesFlow.
-
 ## Generalized Bayesian Inference
 
-A kind of likelihood-free inference, general Bayesian inference [@bissiri_general_2016] uses a loss function instead of a likelihood. As expected, this results in a decidely decision-theoretic approach to inference where the use of a likelihood is a special case.
+A kind of likelihood-free inference, general Bayesian inference [@bissiri_general_2016] uses a loss function in place of a likelihood. As expected, this results in a decidely decision-theoretic approach to inference where the use of a likelihood is a special case.
 
 As with all decision theory, the initial problem becomes specifying the objective function. If the objective function can be specified, the argument is that this is not an approximation but an update directly on the parameters of interest.
 
@@ -34,6 +26,16 @@ Instead of decision theory leading to point estimates, under this approach the r
 
 - Do all uses require the choice of the weighting hyperparameter $w$?
 - Doesn't this all assume there is a true data-generating process and thus model misspecification?
+
+## Agent-Based Modeling
+
+A decidely likelihood-free approach to inference where individual agents are simulated to act according to their own loss functions and are influenced by explicit institutional constrains. The likelihood is thus implicit in the aggregation of individual agent loss functions (i.e., "endogenous stochastisity").
+
+Here we must be mindful of the Durlauf Critique and ensure that agent loss functions actually aggregate in a way that is realistic and not just re-producing rational expectations or exhibiting an emergent order that isn't well calibrated.
+
+- Does likelihood heterogeneity fit with agent-based modeling?
+- Tyler argues that method of simulated moment (MSM) is a kind of frequentist approximate Bayesian computation (ABC).
+- What's the relationship to "empirical risk minimization," (PML p. 190) "generalized Bayes," and modern "simulation-based inference"?
 
 ## Generalized Variational Inference
 
@@ -76,3 +78,10 @@ Is this a rediscovery of Geweke and Amisano's "Optimal prediction pools"? Which 
 - Isn't this some sort of information leakage since we're using the posterior predictive to inform the estimation?
 - What's the relationship between mixture and multilevel models?
 
+## Probabilistic Machine Learning
+
+Start with the published choice symposium paper.
+
+## Simulation-Based Inference
+
+Including amortized Bayesian inference and the use of BayesFlow.

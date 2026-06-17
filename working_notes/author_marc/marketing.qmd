@@ -49,9 +49,3 @@ In the binomial model, a cattalactic approach would still assume 1. market data 
 - Where and how are hierarchical models used in aggregating?
 - Are there finance models that simultaneously model demand and supply in order to identify the spot price?
 - Or is the spot price not endogenous to the options pricing model?
-
-## Agent-Based Modeling
-
-- How does likelihood heterogeneity fit with agent-based modeling?
-- What's the relationship to "empirical risk minimization," (PML p. 190) "generalized Bayes," and modern "simulation-based inference"?
-
