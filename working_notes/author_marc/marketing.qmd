@@ -11,6 +11,7 @@ Market microstructure is the study of how exchange occurs in financial markets. 
 
 Marketing and market microstructure are separately connected to Misesian valuation, the Hayekian knowledge problem, and subjective probability, albeit in different types of exchange. In order to explore the connection between marketing and market microstructure, we need to start with the primitives and then consider theories that may serve as common foundations before attempting to produce a unified theory of exchange.
 
+- See Summer Reading List: From Microeconomics to Decision Theory
 - Does Buchanan discuss the inability to estimate demand in public choice?
 - Profit-loss analogy in markets for the evaluation game?
 - Sun-Abraham group-level estimates, specifically for event studies?
