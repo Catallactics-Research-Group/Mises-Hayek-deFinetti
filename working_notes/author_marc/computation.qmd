@@ -6,7 +6,7 @@ bibliography: references.bib
 
 ## Introduction
 
-Computational statistical catallactics will, of necessity, build on the shoulders of giants. This note summarizes some of the assigned reading plus related work (including "Post-Bayes" **(add links)** papers from a Bayesian computation in marketing reading group) that might enhance our development of the approach.
+Computational statistical catallactics will, of necessity, build on the shoulders of giants. This note summarizes some of the assigned reading plus related work (including ["Post-Bayes"](https://www.lorenzopacchiardi.me/blog/2021/generalizedBayes/) (see also the [seminar](https://postbayes.github.io/seminar/) and associated [YouTube series](https://www.youtube.com/@postbayes)) papers from my Bayesian Computation in Marketing reading group) that might enhance our development of the approach.
 
 The focus across these various areas is on the limitations of the three assumptions at the center of "traditional" Bayesian computation:
 
@@ -14,7 +14,7 @@ The focus across these various areas is on the limitations of the three assumpti
 2. We can specify a prior that accurately captures our prior knowledge in terms of the parameters of the specified likelihood.
 3. We can sample from the posterior.
 
-Note that the way we sample from the posterior is clearly identified here as part of the modeling process and not a separate problem or a foregone conclusion.
+Note that the way we sample from the posterior is clearly identified here as part of the modeling process and not a separate problem or a foregone conclusion. However, much of this literature is focused on "classical" or even "objective" Bayesian inference where there is concern about model misspecification rather than the subjective Bayesian approach we've been taking.
 
 ## Generalized Bayesian Inference
 
@@ -24,22 +24,17 @@ As with all decision theory, the initial problem becomes specifying the objectiv
 
 Instead of decision theory leading to point estimates, under this approach the reporting of the posterior distribution on the parameter(s) of interest is the action made under uncertainty. Implied here is that we only need to set a prior(s) on the parameter(s) of interest instead of all of the parameters (including nuisance parameters) from a likelihood.
 
-- Do all uses require the choice of the weighting hyperparameter $w$?
-- Doesn't this all assume there is a true data-generating process and thus model misspecification?
-
-## Agent-Based Modeling
-
-A decidely likelihood-free approach to inference where individual agents are simulated to act according to their own loss functions and are influenced by explicit institutional constrains. The likelihood is thus implicit in the aggregation of individual agent loss functions (i.e., "endogenous stochastisity").
-
-Here we must be mindful of the Durlauf Critique and ensure that agent loss functions actually aggregate in a way that is realistic and not just re-producing rational expectations or exhibiting an emergent order that isn't well calibrated.
-
-- Does likelihood heterogeneity fit with agent-based modeling?
-- Tyler argues that method of simulated moment (MSM) is a kind of frequentist approximate Bayesian computation (ABC).
-- What's the relationship to "empirical risk minimization," (PML p. 190) "generalized Bayes," and modern "simulation-based inference"?
+For this loss-based, generalized Bayesian inference there is a required hyperparameter $w$ that determines the weight given to the loss function relative to the prior. This $w$ hyperparameter is similar to the regularizing parameter $\lambda$ in penalized regression or the exponential term for power likelihoods. The choice of $w$, similar to $\lambda$, is also often decided by cross-validation or can be estimated in a multilevel model.
 
 ## Generalized Variational Inference
 
-Turning sampling from a posterior into an optimization problem.
+If variational inference is all about turning sampling from a posterior into an optimization problem, generalizing variational inference is inspired by representing Bayes' rule as "infinite dimensional optimization" [@knoblauch_optimization-centric_nodate].
+
+This approach refers to "The Rule of Three" which requires:
+
+1. A loss function.
+2. A divergence criteria.
+3. A variational family for approximating the posterior.
 
 - Where does provably approximately correct (PAC) Bayes fit in?
 
@@ -85,3 +80,13 @@ Start with the published choice symposium paper.
 ## Simulation-Based Inference
 
 Including amortized Bayesian inference and the use of BayesFlow.
+
+## Agent-Based Modeling
+
+A decidely likelihood-free approach to inference where individual agents are simulated to act according to their own loss functions and are influenced by explicit institutional constrains. The likelihood is thus implicit in the aggregation of individual agent loss functions (i.e., "endogenous stochastisity").
+
+Here we must be mindful of the Durlauf Critique and ensure that agent loss functions actually aggregate in a way that is realistic and not just re-producing rational expectations or exhibiting an emergent order that isn't well calibrated.
+
+- Does likelihood heterogeneity fit with agent-based modeling?
+- Tyler argues that method of simulated moment (MSM) is a kind of frequentist approximate Bayesian computation (ABC).
+- What's the relationship to "empirical risk minimization," (PML p. 190) "generalized Bayes," and modern "simulation-based inference"?
