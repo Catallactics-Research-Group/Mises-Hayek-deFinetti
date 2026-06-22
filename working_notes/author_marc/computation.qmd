@@ -6,15 +6,18 @@ bibliography: references.bib
 
 ## Introduction
 
-Computational statistical catallactics will, of necessity, build on the shoulders of giants. This note summarizes some of the assigned reading plus related work (including ["Post-Bayes"](https://www.lorenzopacchiardi.me/blog/2021/generalizedBayes/) (see also the [seminar](https://postbayes.github.io/seminar/) and associated [YouTube series](https://www.youtube.com/@postbayes)) papers from my Bayesian Computation in Marketing reading group) that might enhance our development of the approach.
+Computational statistical catallactics will, of necessity, build on the shoulders of giants. This note summarizes some of the assigned reading plus related work, including the ["Post-Bayes"](https://www.lorenzopacchiardi.me/blog/2021/generalizedBayes/) (see also the [seminar](https://postbayes.github.io/seminar/) and associated [YouTube series](https://www.youtube.com/@postbayes) papers from my Bayesian Computation in Marketing reading group) that might enhance our development of the approach.
 
-The focus across these various areas is on the limitations of the three assumptions at the center of "traditional" Bayesian computation:
+The focus across this work is on the limitations of the three assumptions at the center of "classical" Bayesian computation:
 
 1. We can specify a likelihood that accurately captures the "true data-generation process."
 2. We can specify a prior that accurately captures our prior knowledge in terms of the parameters of the specified likelihood.
 3. We can sample from the posterior.
 
 Note that the way we sample from the posterior is clearly identified here as part of the modeling process and not a separate problem or a foregone conclusion. However, much of this literature is focused on "classical" or even "objective" Bayesian inference where there is concern about model misspecification rather than the subjective Bayesian approach we've been taking.
+
+- How is the model space assumed so that robustness to model misspecification can be computed?
+- Are these assumptions even relevant for a subjective Bayesian approach?
 
 ## Generalized Bayesian Inference
 
@@ -28,15 +31,20 @@ For this loss-based, generalized Bayesian inference there is a required hyperpar
 
 ## Generalized Variational Inference
 
-If variational inference is all about turning sampling from a posterior into an optimization problem, generalizing variational inference is inspired by representing Bayes' rule as "infinite dimensional optimization" [@knoblauch_optimization-centric_nodate].
+If [variational inference](https://www.youtube.com/watch?app=desktop&v=XECLmgnS6Ng&ra=m) is all about turning sampling from a posterior into an optimization problem where we employ a proposal distribution to approximate the posterior, generalizing variational inference is inspired by representing Bayes' rule as "infinite dimensional optimization" problem [@knoblauch_optimization-centric_nodate].
 
-This approach refers to "The Rule of Three" which requires:
+Variational inference parameterizes a proposal distribution to approximate the target posterior distribution by minimizing the Evidence Lower Bound (ELBO) (which is composed of the expected value of the joint model and the expected value of the proposal distribution) in order to minimize the KL divergence between the proposal and target distributions. This approach take a number of forms, including Automatic Differentiation Variational Inference (ADVI) where the proposal distribution is generalized as a mean-field Gaussian (i.e., all the parameters are independent of eachother) and the ELBO is optimized using automatic differentiation.
+
+In @knoblauch_optimization-centric_nodate they seek to generalize variational inference further by not requiring a likelihood and not relying on the KL divergence. They refer to this approach as "The Rule of Three" which requires:
 
 1. A loss function.
-2. A divergence criteria.
-3. A variational family for approximating the posterior.
+2. A divergence criteria to measure the deviation of the posterior from the prior.
+3. A space of feasible solutions for approximating the posterior.
 
-- Where does provably approximately correct (PAC) Bayes fit in?
+Given the space of all probability measures on a set of parameters (i.e., an infinite dimensional optimization problem), Bayesian inference emerges as a regularized optimization with the KL divergence as the regularization term. Thus any Bayesian posterior is equivalent to an optimization problem. Typical variational inference, by specifying a proposal distribution, is a finite-dimensional optimization. Generalized variational inference, by not specifying a proposal distribution, remains an infinite-dimensional optimization problem where the loss function takes the place of the likelihood and the divergence criteria regularizes with respect to deviation from the prior.
+
+- How does this compare to Pathfinder Variational Inference? Is it "suboptimal" thanks to Theorem 2?
+- What of the argument in the p. 13 footnote that a likelihood is only ever an approximation, even for subjectivists?
 
 ### Predictively Oriented Posteriors
 
