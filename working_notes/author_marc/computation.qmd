@@ -19,6 +19,15 @@ Note that the way we sample from the posterior is clearly identified here as par
 - How is the model space assumed so that robustness to model misspecification can be computed?
 - Are these assumptions even relevant for a subjective Bayesian approach?
 
+## Probabilistic Machine Learning
+
+Probabilistic machine learning (PML), defined as the pairing of probabilistic (i.e., Bayesian and "quasi-Bayesian") modeling and machine learning methods, promises to provide "flexibility, scalability, and uncertainty quantification." [@dew_probabilistic_2024] The focus is on combining the interpretable meaning of parameters and their quantification of uncertainty in probabilistic models with the flexibility of machine learning methods to specify and estimate those models. Such uncertainty quantification remains optimal for decision-making now extended to the scale and speed of modern data using machine learning methods. [@murphy_probabilistic_2022; @dew_probabilistic_2024]
+
+Since much of machine learning is atheoretic, part of the appeal of PML is to use Bayesian statistics as the principled foundation for employing machine learning methods. Examples of PML include:
+
+- Using variational inference to estimate mixed logit choice models.
+- 
+
 ## Generalized Bayesian Inference
 
 A kind of likelihood-free inference, general Bayesian inference [@bissiri_general_2016] uses a loss function in place of a likelihood. As expected, this results in a decidely decision-theoretic approach to inference where the use of a likelihood is a special case.
@@ -80,10 +89,6 @@ Given the space of all probability measures on a set of parameters (i.e., an inf
 
 - How does this compare to Pathfinder Variational Inference? Is it "suboptimal" thanks to Theorem 2?
 - What of the argument in the p. 13 footnote that a likelihood is only ever an approximation, even for subjectivists?
-
-## Probabilistic Machine Learning
-
-Start with the published choice symposium paper.
 
 ## Simulation-Based Inference
 
