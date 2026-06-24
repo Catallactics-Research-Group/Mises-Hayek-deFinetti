@@ -16,8 +16,9 @@ The focus across this work is on the limitations of the three assumptions at the
 
 Note that the way we sample from the posterior is clearly identified here as part of the modeling process and not a separate problem or a foregone conclusion. However, much of this literature is focused on "classical" or even "objective" Bayesian inference where there is concern about model misspecification rather than the subjective Bayesian approach we've been taking.
 
-- How is the model space assumed so that robustness to model misspecification can be computed?
-- Are these assumptions even relevant for a subjective Bayesian approach?
+- How is the model space assumed so that robustness to model misspecification can be computed? M-closed?
+- Are these assumptions even relevant for a subjective Bayesian approach? What of the argument in the p. 13 footnote in @knoblauch_optimization-centric_nodate that a likelihood is only ever an approximation, even for subjectivists?
+- Where does Pathfinder Variational Inference fit in?
 
 ## Probabilistic Machine Learning
 
@@ -26,7 +27,6 @@ Probabilistic machine learning (PML), defined as the pairing of probabilistic (i
 Since much of machine learning is atheoretic, part of the appeal of PML is to use Bayesian statistics as the principled foundation for employing machine learning methods. Examples of PML include:
 
 - Using variational inference to estimate mixed logit choice models.
-- 
 
 ## Generalized Bayesian Inference
 
@@ -75,20 +75,23 @@ Is this a rediscovery of Geweke and Amisano's "Optimal prediction pools"? Which 
 
 ## Generalized Variational Inference
 
-If [variational inference](https://www.youtube.com/watch?app=desktop&v=XECLmgnS6Ng&ra=m) is all about turning sampling from a posterior into an optimization problem where we employ a proposal distribution to approximate the posterior, generalizing variational inference is inspired by representing Bayes' rule as "infinite dimensional optimization" problem [@knoblauch_optimization-centric_nodate].
+If [variational inference](https://www.youtube.com/watch?app=desktop&v=XECLmgnS6Ng&ra=m) is all about turning sampling from a posterior into an optimization problem where we employ a proposal distribution to approximate the posterior, generalizing variational inference is inspired by representing Bayes' rule as the solution to an "infinite dimensional optimization" problem [@knoblauch_optimization-centric_nodate]. To be clear, the argument is that this representation of Bayes' rule as an optimization problem is more general than Bayes' rule as a sampling problem.
 
 Variational inference parameterizes a proposal distribution to approximate the target posterior distribution by minimizing the Evidence Lower Bound (ELBO) (which is composed of the expected value of the joint model and the expected value of the proposal distribution) in order to minimize the KL divergence between the proposal and target distributions. This approach take a number of forms, including Automatic Differentiation Variational Inference (ADVI) where the proposal distribution is generalized as a mean-field Gaussian (i.e., all the parameters are independent of eachother) and the ELBO is optimized using automatic differentiation.
 
 In @knoblauch_optimization-centric_nodate they seek to generalize variational inference further by not requiring a likelihood and not relying on the KL divergence. They refer to this approach as "The Rule of Three" which requires:
 
-1. A loss function.
-2. A divergence criteria to measure the deviation of the posterior from the prior.
-3. A space of feasible solutions for approximating the posterior.
+1. A loss function in place of a likelihood.
+2. A divergence criteria to measure the deviation of the posterior approximation from the prior.
+3. A space of feasible distributions (e.g., a variational family) for approximating the posterior.
 
-Given the space of all probability measures on a set of parameters (i.e., an infinite dimensional optimization problem), Bayesian inference emerges as a regularized optimization with the KL divergence as the regularization term. Thus any Bayesian posterior is equivalent to an optimization problem. Typical variational inference, by specifying a proposal distribution, is a finite-dimensional optimization. Generalized variational inference, by not specifying a proposal distribution, remains an infinite-dimensional optimization problem where the loss function takes the place of the likelihood and the divergence criteria regularizes with respect to deviation from the prior.
+Given the space of all probability measures on a set of parameters (i.e., an infinite dimensional optimization problem), Bayesian inference emerges as a regularized optimization with the KL divergence as the regularization term. Thus any Bayesian posterior is equivalent to an optimization problem. Typical variational inference, by specifying a proposal distribution, is a finite-dimensional optimization. And this variational inference is optimal if the "true posterior" is within the variational family of proposal distributions.
 
-- How does this compare to Pathfinder Variational Inference? Is it "suboptimal" thanks to Theorem 2?
-- What of the argument in the p. 13 footnote that a likelihood is only ever an approximation, even for subjectivists?
+This optimization-centric, generalized variational inference approach, by not specifying a proposal distribution, remains an infinite-dimensional optimization problem where the loss function takes the place of the likelihood and the divergence criteria regularizes with respect to deviation from the prior. However, the divergence criteria does more than regularize, it determines how uncertainty quantification occurs.
+
+- Like how M-estimation generalizes MLE?
+- Connection to Bernstein–von Mises theorem?
+- Is the loss and divergence criteria enough bite to say anything at all?
 
 ## Simulation-Based Inference
 
