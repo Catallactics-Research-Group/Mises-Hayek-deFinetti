@@ -22,9 +22,9 @@ Note that the way we sample from the posterior is clearly identified here as par
 
 ## Probabilistic Machine Learning
 
-Probabilistic machine learning (PML), defined as the pairing of probabilistic (i.e., Bayesian and "quasi-Bayesian") modeling and machine learning methods, promises to provide "flexibility, scalability, and uncertainty quantification." [@dew_probabilistic_2024] The focus is on combining the interpretable meaning of parameters and their quantification of uncertainty in probabilistic models with the flexibility of machine learning methods to specify and estimate those models. Such uncertainty quantification remains optimal for decision-making now extended to the scale and speed of modern data using machine learning methods. [@murphy_probabilistic_2022; @dew_probabilistic_2024]
+Probabilistic machine learning (PML), defined as the pairing of probabilistic (i.e., Bayesian and "quasi-Bayesian") modeling and machine learning methods, promises to provide "flexibility, scalability, and uncertainty quantification." [@dew_probabilistic_2024] The focus is on combining the interpretable meaning of parameters and their quantification of uncertainty in probabilistic models with the flexibility of machine learning methods to estimate and specify pieces of those models. Uncertainty quantification remains optimal for decision-making now extended to the scale and speed of modern data using machine learning methods. [@murphy_probabilistic_2022; @dew_probabilistic_2024]
 
-Since much of machine learning is atheoretic, part of the appeal of PML is to use Bayesian statistics as the principled foundation for employing machine learning methods. Examples of PML include:
+Since much of machine learning is atheoretic, part of the appeal of PML is to use Bayesian statistics as the principled foundation for employing machine learning methods as posterior approximations. Examples of PML include:
 
 - Using variational inference to estimate mixed logit choice models.
 
