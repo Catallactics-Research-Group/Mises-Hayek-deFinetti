@@ -6,27 +6,19 @@ bibliography: references.bib
 
 ## Introduction
 
-Computational statistical catallactics will, of necessity, build on the shoulders of giants. This note summarizes some of the assigned reading plus related work, including the ["Post-Bayes"](https://www.lorenzopacchiardi.me/blog/2021/generalizedBayes/) (see also the [seminar](https://postbayes.github.io/seminar/) and associated [YouTube series](https://www.youtube.com/@postbayes) papers from my Bayesian Computation in Marketing reading group) that might enhance our development of the approach.
+Computational statistical catallactics will, of necessity, build on the shoulders of giants. This note summarizes some related work, including the ["Post-Bayes"](https://www.lorenzopacchiardi.me/blog/2021/generalizedBayes/) (see also the [seminar](https://postbayes.github.io/seminar/) and associated [YouTube series](https://www.youtube.com/@postbayes)) papers from my Bayesian Computation in Marketing reading group that might enhance our development of the approach.
 
 The focus across this work is on the limitations of the three assumptions at the center of "classical" Bayesian computation:
 
-1. We can specify a likelihood that accurately captures the "true data-generation process."
-2. We can specify a prior that accurately captures our prior knowledge in terms of the parameters of the specified likelihood.
+1. We can specify a likelihood that captures the "true data-generation process."
+2. We can specify a prior that captures our prior knowledge in terms of the parameters of the specified likelihood.
 3. We can sample from the posterior.
 
-Note that the way we sample from the posterior is clearly identified here as part of the modeling process and not a separate problem or a foregone conclusion. However, much of this literature is focused on "classical" or even "objective" Bayesian inference where there is concern about model misspecification rather than the subjective Bayesian approach we've been taking.
+Since much of this literature is focused on "classical" or even "objective" Bayesian inference rather than the subjective Bayesian approach we've been taking, there is a fixation on "model misspecification" or specifying a likelihood (or prior) that doesn't capture the "true data-generating process" (or our prior knowledge).
 
 - How is the model space assumed so that robustness to model misspecification can be computed? M-closed?
 - Are these assumptions even relevant for a subjective Bayesian approach? What of the argument in the p. 13 footnote in @knoblauch_optimization-centric_nodate that a likelihood is only ever an approximation, even for subjectivists?
 - Where does Pathfinder Variational Inference fit in?
-
-## Probabilistic Machine Learning
-
-Probabilistic machine learning (PML), defined as the pairing of probabilistic (i.e., Bayesian and "quasi-Bayesian") modeling and machine learning methods, promises to provide "flexibility, scalability, and uncertainty quantification." [@dew_probabilistic_2024] The focus is on combining the interpretable meaning of parameters and their quantification of uncertainty in probabilistic models with the flexibility of machine learning methods to estimate and specify pieces of those models. Uncertainty quantification remains optimal for decision-making now extended to the scale and speed of modern data using machine learning methods. [@murphy_probabilistic_2022; @dew_probabilistic_2024]
-
-Since much of machine learning is atheoretic, part of the appeal of PML is to use Bayesian statistics as the principled foundation for employing machine learning methods as posterior approximations. Examples of PML include:
-
-- Using variational inference to estimate mixed logit choice models.
 
 ## Generalized Bayesian Inference
 
@@ -38,11 +30,11 @@ Instead of decision theory leading to point estimates, under this approach the r
 
 For this loss-based, generalized Bayesian inference there is a required hyperparameter $w$ that determines the weight given to the loss function relative to the prior. This $w$ hyperparameter is similar to the regularizing parameter $\lambda$ in penalized regression or the exponential term for power likelihoods. The choice of $w$, similar to $\lambda$, is also often decided by cross-validation or can be estimated in a multilevel model.
 
-### Predictively Oriented Posteriors
+## Predictively Oriented Posteriors
 
-This a generalized variational inference method that computes an approximation of the posterior using the posterior predictive rather than the posterior as the primitive object of interest. It appears to be a recreation of Geweke and Amisano's "Optimal Prediction Pools" and the predictive power of hierarchical models and a rediscovery of de Finetti's approach to model building. However, it's confused with a focus on frequentist and "classical Bayesian" concepts like model misspecification, posterior collapse, and complete model spaces.
+A variational inference method, @mclatchie_predictively_2026 computes an approximation of the posterior using the posterior predictive rather than the posterior as the primitive object of interest. It may be a recreation of Geweke and Amisano's "Optimal Prediction Pools" and a rediscovery of de Finetti's approach to model building. However, it's confused with a focus on frequentist and "classical Bayesian" concepts like model misspecification, posterior collapse, and complete model spaces.
 
-Some fundamental **philosophical** and **computational** questions (see *PML* p. 175-176):
+Some fundamental **philosophical** and **computational** questions (see @murphy_probabilistic_2022 p. 175-176):
 
 - Isn't inference just a special kind of prediction?
 - What kind of uncertainty do we have in a posterior distribution?
@@ -51,23 +43,18 @@ Meaningful quantification of uncertainty are those made by individuals (i.e., su
 
 De Finetti started with the posterior predictive distribution and then derived Bayes rule. This suggest we are indeed uncertain about unseen data (i.e., aleatoric or data uncertainty) as it relates to the observables.
 
-- Doesn't the posterior predictive as Bayesian model averaging suggest that the posterior also capture epistemic or model uncertainty?
+- Doesn't the posterior predictive as Bayesian model averaging suggest that the posterior also captures epistemic or model uncertainty?
 - Is "posterior collapse" actually a problem? Does more data always reduce posterior uncertainty?
 
 This is a "classical Bayesian" problem. They're conflating model misspecification and posterior collapse. From a subjective Bayesian, this is a feature, not a bug. IJ Goode talks about no guarantee that more data will lead to posterior collapse. (Tyler can find a quote.) If we observe the "whole population" then probability no longer applies. Posterior collapse being a problem assumes a "complete model space," which is a violation of Cromwell's rule. (See Geweke's "Complete and Incomplete Econometric Models" and Poirer's paper on principals of pragmatic model building.)
 
 - Do we even care about "model misspecification" from a radical subjectivist perspective?
 
-Thinking about "true data generating process" and therefore "model misspecification" is a frequentist consideration. (See 46656 Varieties of Bayesians by IJ Goode.) De Finneti is all about the model as a predictive machine. (See the quote Smith on de Finetti.) The likelihood of is an information transfer function. (See the quote from Ladd.) In other words, in machine learning we don't care about "model misspecification" because we don't care about the "true data generating process." Why are we importing this along with Bayes? Focus on "classical Bayesianism."
+Thinking about "true data generating process" and therefore "model misspecification" is a frequentist consideration. (See 46656 Varieties of Bayesians by IJ Goode.) De Finneti is all about the model as a predictive machine. (See the quote from Smith on de Finetti.) The likelihood is an information transfer function. (See the quote from Ladd.) In other words, in machine learning we don't care about "model misspecification" because we don't care about the "true data generating process."
 
+- Why are is machine learning importing an obsession with model mispecification along with Bayes?
 - Why does Bayesian predictive performance "falter outside of the narrow conditions" that are somehow optimal?
-
-More of the same.
-
 - What does it mean to minimize the average scoring rule rathan the score of the averaged model?
-
-Is this a rediscovery of Geweke and Amisano's "Optimal prediction pools"? Which is an ensemble model. It's Jensen's inequality which will only be equal if they have a true model. Very de Finetti-like with the posterior predictive being the primitive. Poirier on Exchangeability.
-
 - Doesn't adaptive pooling also provide an improvement in posterior predictive performance?
 - Is this because it reduces the amount of data available for each group?
 - Isn't this some sort of information leakage since we're using the posterior predictive to inform the estimation?
@@ -75,7 +62,7 @@ Is this a rediscovery of Geweke and Amisano's "Optimal prediction pools"? Which 
 
 ## Generalized Variational Inference
 
-If [variational inference](https://www.youtube.com/watch?app=desktop&v=XECLmgnS6Ng&ra=m) is all about turning sampling from a posterior into an optimization problem where we employ a proposal distribution to approximate the posterior, generalizing variational inference is inspired by representing Bayes' rule as the solution to an "infinite dimensional optimization" problem [@knoblauch_optimization-centric_nodate]. To be clear, the argument is that this representation of Bayes' rule as an optimization problem is more general than Bayes' rule as a sampling problem.
+If [variational inference](https://www.youtube.com/watch?app=desktop&v=XECLmgnS6Ng&ra=m) is all about turning sampling into an optimization problem where we employ a proposal distribution to approximate the posterior, generalizing variational inference is inspired by representing Bayes' rule as the solution to an "infinite dimensional optimization" problem [@knoblauch_optimization-centric_nodate]. To be clear, the argument is that this representation of Bayes' rule as an optimization problem is more general than Bayes' rule as a sampling problem.
 
 Variational inference parameterizes a proposal distribution to approximate the target posterior distribution by minimizing the Evidence Lower Bound (ELBO) (which is composed of the expected value of the joint model and the expected value of the proposal distribution) in order to minimize the KL divergence between the proposal and target distributions. This approach take a number of forms, including Automatic Differentiation Variational Inference (ADVI) where the proposal distribution is generalized as a mean-field Gaussian (i.e., all the parameters are independent of eachother) and the ELBO is optimized using automatic differentiation.
 
@@ -95,7 +82,13 @@ This optimization-centric, generalized variational inference approach, by not sp
 
 ## Simulation-Based Inference
 
-Including amortized Bayesian inference and the use of BayesFlow.
+Including amortized Bayesian inference and the use of BayesFlow. See:
+
+- @cranmer_frontier_2020
+- [Amortized Bayesian Workflow Tutorial](https://pipme.github.io/amortized-Bayesian-workflow/)
+- [Simulations in Statistical Workflows](https://arxiv.org/abs/2503.24011)
+- [Simulation-based prior knowledge elicitation for parametric Bayesian models](https://www.nature.com/articles/s41598-024-68090-7)
+- [BayesFlow 2: Multi-Backend Amortized Bayesian Inference in Python](https://arxiv.org/abs/2602.07098)
 
 ## Agent-Based Modeling
 
@@ -105,4 +98,10 @@ Here we must be mindful of the Durlauf Critique and ensure that agent loss funct
 
 - Does likelihood heterogeneity fit with agent-based modeling?
 - Tyler argues that method of simulated moment (MSM) is a kind of frequentist approximate Bayesian computation (ABC).
-- What's the relationship to "empirical risk minimization," (PML p. 190) "generalized Bayes," and modern "simulation-based inference"?
+- What's the relationship to "empirical risk minimization," (@murphy_probabilistic_2022 p. 190) "generalized Bayes," and modern "simulation-based inference"?
+
+## Probabilistic Machine Learning
+
+Probabilistic machine learning (PML), defined as the pairing of probabilistic (i.e., Bayesian and "quasi-Bayesian") modeling and machine learning methods, promises to provide "flexibility, scalability, and uncertainty quantification." [@dew_probabilistic_2024] The focus is on combining the interpretable meaning of parameters and their quantification of uncertainty in probabilistic models with the flexibility of machine learning methods to estimate and specify pieces of those models. Uncertainty quantification remains optimal for decision-making now extended to the scale and speed of modern data using machine learning methods. [@murphy_probabilistic_2022; @dew_probabilistic_2024]
+
+Since much of machine learning is atheoretic, part of the appeal of PML is to use Bayesian statistics as the principled foundation for employing machine learning methods as posterior approximations. Examples of PML include using variational inference to estimate mixed logit choice models.
