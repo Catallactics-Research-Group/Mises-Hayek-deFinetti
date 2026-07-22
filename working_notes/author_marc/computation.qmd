@@ -34,6 +34,8 @@ For this loss-based, generalized Bayesian inference there is a required hyperpar
 
 A variational inference method, @mclatchie_predictively_2026 computes an approximation of the posterior using the posterior predictive rather than the posterior as the primitive object of interest. It may be a recreation of Geweke and Amisano's "Optimal Prediction Pools" and a rediscovery of de Finetti's approach to model building. However, it's confused with a focus on frequentist and "classical Bayesian" concepts like model misspecification, posterior collapse, and complete model spaces.
 
+Bob Carpenter responded to a [thread on this paper](https://discourse.pymc.io/t/question-regarding-predictively-oriented-posteriors/17592/10), which includes one of the authors, and he arrived at the same place as we did: Embrace the Bayesian workflow and fit better models rather than trying to fix the inferences of general models.
+
 Some fundamental **philosophical** and **computational** questions (see @murphy_probabilistic_2022 p. 175-176):
 
 - Isn't inference just a special kind of prediction?
