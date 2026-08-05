@@ -30,6 +30,14 @@ Instead of decision theory leading to point estimates, under this approach the r
 
 For this loss-based, generalized Bayesian inference there is a required hyperparameter $w$ that determines the weight given to the loss function relative to the prior. This $w$ hyperparameter is similar to the regularizing parameter $\lambda$ in penalized regression or the exponential term for power likelihoods. The choice of $w$, similar to $\lambda$, is also often decided by cross-validation or can be estimated in a multilevel model.
 
+## Martingale Posterior Distributions
+
+Ask for Sam Levy's presentation.
+
+- Builds on de Finetti and Doob
+- Similar to ABC but assumes a true unknown sampling distribution
+- Moya and Walker (2025, *Statistical Science*) for a time series implementation
+
 ## Predictively Oriented Posteriors
 
 A variational inference method, @mclatchie_predictively_2026 computes an approximation of the posterior using the posterior predictive rather than the posterior as the primitive object of interest. It may be a recreation of Geweke and Amisano's "Optimal Prediction Pools" and a rediscovery of de Finetti's approach to model building. However, it's confused with a focus on frequentist and "classical Bayesian" concepts like model misspecification, posterior collapse, and complete model spaces.
