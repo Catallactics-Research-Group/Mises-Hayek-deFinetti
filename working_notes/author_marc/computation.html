@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Bayesian Computation</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="computation_files/libs/clipboard/clipboard.min.js"></script>
+<script src="computation_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="computation_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="computation_files/libs/quarto-html/popper.min.js"></script>
+<script src="computation_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="computation_files/libs/quarto-html/anchor.min.js"></script>
+<link href="computation_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="computation_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="computation_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="computation_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="computation_files/libs/bootstrap/bootstrap-138a6193a3bd40baf1e627da441a4734.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bayesian Computation</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Computational statistical catallactics will, of necessity, build on the shoulders of giants. This note summarizes some related work, including the <a href="https://www.lorenzopacchiardi.me/blog/2021/generalizedBayes/">“Post-Bayes”</a> (see also the <a href="https://postbayes.github.io/seminar/">seminar</a> and associated <a href="https://www.youtube.com/@postbayes">YouTube series</a>) papers from my Bayesian Computation in Marketing reading group that might enhance our development of the approach.</p>
+<p>The focus across this work is on the limitations of the three assumptions at the center of “classical” Bayesian computation:</p>
+<ol type="1">
+<li>We can specify a likelihood that captures the “true data-generation process.”</li>
+<li>We can specify a prior that captures our prior knowledge in terms of the parameters of the specified likelihood.</li>
+<li>We can sample from the posterior.</li>
+</ol>
+<p>Since much of this literature is focused on “classical” or even “objective” Bayesian inference rather than the subjective Bayesian approach we’ve been taking, there is a fixation on “model misspecification” or specifying a likelihood (or prior) that doesn’t capture the “true data-generating process” (or our prior knowledge).</p>
+<ul>
+<li>How is the model space assumed so that robustness to model misspecification can be computed? M-closed?</li>
+<li>Are these assumptions even relevant for a subjective Bayesian approach? What of the argument in the p.&nbsp;13 footnote in <span class="citation" data-cites="knoblauch_optimization-centric_nodate">Knoblauch et al. (<a href="#ref-knoblauch_optimization-centric_nodate" role="doc-biblioref">n.d.</a>)</span> that a likelihood is only ever an approximation, even for subjectivists?</li>
+<li>Where does Pathfinder Variational Inference fit in?</li>
+</ul>
+</section>
+<section id="generalized-bayesian-inference" class="level2">
+<h2 class="anchored" data-anchor-id="generalized-bayesian-inference">Generalized Bayesian Inference</h2>
+<p>A kind of likelihood-free inference, general Bayesian inference <span class="citation" data-cites="bissiri_general_2016">(<a href="#ref-bissiri_general_2016" role="doc-biblioref">Bissiri et al. 2016</a>)</span> uses a loss function in place of a likelihood. As expected, this results in a decidely decision-theoretic approach to inference where the use of a likelihood is a special case.</p>
+<p>As with all decision theory, the initial problem becomes specifying the objective function. If the objective function can be specified, the argument is that this is not an approximation but an update directly on the parameters of interest.</p>
+<p>Instead of decision theory leading to point estimates, under this approach the reporting of the posterior distribution on the parameter(s) of interest is the action made under uncertainty. Implied here is that we only need to set a prior(s) on the parameter(s) of interest instead of all of the parameters (including nuisance parameters) from a likelihood.</p>
+<p>For this loss-based, generalized Bayesian inference there is a required hyperparameter <span class="math inline">\(w\)</span> that determines the weight given to the loss function relative to the prior. This <span class="math inline">\(w\)</span> hyperparameter is similar to the regularizing parameter <span class="math inline">\(\lambda\)</span> in penalized regression or the exponential term for power likelihoods. The choice of <span class="math inline">\(w\)</span>, similar to <span class="math inline">\(\lambda\)</span>, is also often decided by cross-validation or can be estimated in a multilevel model.</p>
+</section>
+<section id="martingale-posterior-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="martingale-posterior-distributions">Martingale Posterior Distributions</h2>
+<p>Ask for Sam Levy’s presentation.</p>
+<ul>
+<li>Builds on de Finetti and Doob</li>
+<li>Similar to ABC but assumes a true unknown sampling distribution</li>
+<li>Moya and Walker (2025, <em>Statistical Science</em>) for a time series implementation</li>
+</ul>
+</section>
+<section id="predictively-oriented-posteriors" class="level2">
+<h2 class="anchored" data-anchor-id="predictively-oriented-posteriors">Predictively Oriented Posteriors</h2>
+<p>A variational inference method, <span class="citation" data-cites="mclatchie_predictively_2026">McLatchie et al. (<a href="#ref-mclatchie_predictively_2026" role="doc-biblioref">2026</a>)</span> computes an approximation of the posterior using the posterior predictive rather than the posterior as the primitive object of interest. It may be a recreation of Geweke and Amisano’s “Optimal Prediction Pools” and a rediscovery of de Finetti’s approach to model building. However, it’s confused with a focus on frequentist and “classical Bayesian” concepts like model misspecification, posterior collapse, and complete model spaces.</p>
+<p>Bob Carpenter responded to a <a href="https://discourse.pymc.io/t/question-regarding-predictively-oriented-posteriors/17592/10">thread on this paper</a>, which includes one of the authors, and he arrived at the same place as we did: Embrace the Bayesian workflow and fit better models rather than trying to fix the inferences of general models.</p>
+<p>Some fundamental <strong>philosophical</strong> and <strong>computational</strong> questions (see <span class="citation" data-cites="murphy_probabilistic_2022">Murphy (<a href="#ref-murphy_probabilistic_2022" role="doc-biblioref">2022</a>)</span> p.&nbsp;175-176):</p>
+<ul>
+<li>Isn’t inference just a special kind of prediction?</li>
+<li>What kind of uncertainty do we have in a posterior distribution?</li>
+</ul>
+<p>Meaningful quantification of uncertainty are those made by individuals (i.e., subjective) about observationals (i.e., objective). (See Smith quote.)</p>
+<p>De Finetti started with the posterior predictive distribution and then derived Bayes rule. This suggest we are indeed uncertain about unseen data (i.e., aleatoric or data uncertainty) as it relates to the observables.</p>
+<ul>
+<li>Doesn’t the posterior predictive as Bayesian model averaging suggest that the posterior also captures epistemic or model uncertainty?</li>
+<li>Is “posterior collapse” actually a problem? Does more data always reduce posterior uncertainty?</li>
+</ul>
+<p>This is a “classical Bayesian” problem. They’re conflating model misspecification and posterior collapse. From a subjective Bayesian, this is a feature, not a bug. IJ Goode talks about no guarantee that more data will lead to posterior collapse. (Tyler can find a quote.) If we observe the “whole population” then probability no longer applies. Posterior collapse being a problem assumes a “complete model space,” which is a violation of Cromwell’s rule. (See Geweke’s “Complete and Incomplete Econometric Models” and Poirer’s paper on principals of pragmatic model building.)</p>
+<ul>
+<li>Do we even care about “model misspecification” from a radical subjectivist perspective?</li>
+</ul>
+<p>Thinking about “true data generating process” and therefore “model misspecification” is a frequentist consideration. (See 46656 Varieties of Bayesians by IJ Goode.) De Finneti is all about the model as a predictive machine. (See the quote from Smith on de Finetti.) The likelihood is an information transfer function. (See the quote from Ladd.) In other words, in machine learning we don’t care about “model misspecification” because we don’t care about the “true data generating process.”</p>
+<ul>
+<li>Why are is machine learning importing an obsession with model mispecification along with Bayes?</li>
+<li>Why does Bayesian predictive performance “falter outside of the narrow conditions” that are somehow optimal?</li>
+<li>What does it mean to minimize the average scoring rule rathan the score of the averaged model?</li>
+<li>Doesn’t adaptive pooling also provide an improvement in posterior predictive performance?</li>
+<li>Is this because it reduces the amount of data available for each group?</li>
+<li>Isn’t this some sort of information leakage since we’re using the posterior predictive to inform the estimation?</li>
+<li>What’s the relationship between mixture and multilevel models?</li>
+</ul>
+</section>
+<section id="generalized-variational-inference" class="level2">
+<h2 class="anchored" data-anchor-id="generalized-variational-inference">Generalized Variational Inference</h2>
+<p>If <a href="https://www.youtube.com/watch?app=desktop&amp;v=XECLmgnS6Ng&amp;ra=m">variational inference</a> is all about turning sampling into an optimization problem where we employ a proposal distribution to approximate the posterior, generalizing variational inference is inspired by representing Bayes’ rule as the solution to an “infinite dimensional optimization” problem <span class="citation" data-cites="knoblauch_optimization-centric_nodate">(<a href="#ref-knoblauch_optimization-centric_nodate" role="doc-biblioref">Knoblauch et al., n.d.</a>)</span>. To be clear, the argument is that this representation of Bayes’ rule as an optimization problem is more general than Bayes’ rule as a sampling problem.</p>
+<p>Variational inference parameterizes a proposal distribution to approximate the target posterior distribution by minimizing the Evidence Lower Bound (ELBO) (which is composed of the expected value of the joint model and the expected value of the proposal distribution) in order to minimize the KL divergence between the proposal and target distributions. This approach take a number of forms, including Automatic Differentiation Variational Inference (ADVI) where the proposal distribution is generalized as a mean-field Gaussian (i.e., all the parameters are independent of eachother) and the ELBO is optimized using automatic differentiation.</p>
+<p>In <span class="citation" data-cites="knoblauch_optimization-centric_nodate">Knoblauch et al. (<a href="#ref-knoblauch_optimization-centric_nodate" role="doc-biblioref">n.d.</a>)</span> they seek to generalize variational inference further by not requiring a likelihood and not relying on the KL divergence. They refer to this approach as “The Rule of Three” which requires:</p>
+<ol type="1">
+<li>A loss function in place of a likelihood.</li>
+<li>A divergence criteria to measure the deviation of the posterior approximation from the prior.</li>
+<li>A space of feasible distributions (e.g., a variational family) for approximating the posterior.</li>
+</ol>
+<p>Given the space of all probability measures on a set of parameters (i.e., an infinite dimensional optimization problem), Bayesian inference emerges as a regularized optimization with the KL divergence as the regularization term. Thus any Bayesian posterior is equivalent to an optimization problem. Typical variational inference, by specifying a proposal distribution, is a finite-dimensional optimization. And this variational inference is optimal if the “true posterior” is within the variational family of proposal distributions.</p>
+<p>This optimization-centric, generalized variational inference approach, by not specifying a proposal distribution, remains an infinite-dimensional optimization problem where the loss function takes the place of the likelihood and the divergence criteria regularizes with respect to deviation from the prior. However, the divergence criteria does more than regularize, it determines how uncertainty quantification occurs.</p>
+<ul>
+<li>Like how M-estimation generalizes MLE?</li>
+<li>Connection to Bernstein–von Mises theorem?</li>
+<li>Is the loss and divergence criteria enough bite to say anything at all?</li>
+</ul>
+</section>
+<section id="simulation-based-inference" class="level2">
+<h2 class="anchored" data-anchor-id="simulation-based-inference">Simulation-Based Inference</h2>
+<p>Including amortized Bayesian inference and the use of BayesFlow. See:</p>
+<ul>
+<li><span class="citation" data-cites="cranmer_frontier_2020">Cranmer et al. (<a href="#ref-cranmer_frontier_2020" role="doc-biblioref">2020</a>)</span></li>
+<li><a href="https://pipme.github.io/amortized-Bayesian-workflow/">Amortized Bayesian Workflow Tutorial</a></li>
+<li><a href="https://arxiv.org/abs/2503.24011">Simulations in Statistical Workflows</a></li>
+<li><a href="https://www.nature.com/articles/s41598-024-68090-7">Simulation-based prior knowledge elicitation for parametric Bayesian models</a></li>
+<li><a href="https://arxiv.org/abs/2602.07098">BayesFlow 2: Multi-Backend Amortized Bayesian Inference in Python</a></li>
+</ul>
+</section>
+<section id="agent-based-modeling" class="level2">
+<h2 class="anchored" data-anchor-id="agent-based-modeling">Agent-Based Modeling</h2>
+<p>A decidely likelihood-free approach to inference where individual agents are simulated to act according to their own loss functions and are influenced by explicit institutional constrains. The likelihood is thus implicit in the aggregation of individual agent loss functions (i.e., “endogenous stochastisity”).</p>
+<p>Here we must be mindful of the Durlauf Critique and ensure that agent loss functions actually aggregate in a way that is realistic and not just re-producing rational expectations or exhibiting an emergent order that isn’t well calibrated.</p>
+<ul>
+<li>Does likelihood heterogeneity fit with agent-based modeling?</li>
+<li>Tyler argues that method of simulated moment (MSM) is a kind of frequentist approximate Bayesian computation (ABC).</li>
+<li>What’s the relationship to “empirical risk minimization,” (<span class="citation" data-cites="murphy_probabilistic_2022">Murphy (<a href="#ref-murphy_probabilistic_2022" role="doc-biblioref">2022</a>)</span> p.&nbsp;190) “generalized Bayes,” and modern “simulation-based inference”?</li>
+</ul>
+</section>
+<section id="probabilistic-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="probabilistic-machine-learning">Probabilistic Machine Learning</h2>
+<p>Probabilistic machine learning (PML), defined as the pairing of probabilistic (i.e., Bayesian and “quasi-Bayesian”) modeling and machine learning methods, promises to provide “flexibility, scalability, and uncertainty quantification.” <span class="citation" data-cites="dew_probabilistic_2024">(<a href="#ref-dew_probabilistic_2024" role="doc-biblioref">Dew et al. 2024</a>)</span> The focus is on combining the interpretable meaning of parameters and their quantification of uncertainty in probabilistic models with the flexibility of machine learning methods to estimate and specify pieces of those models. Uncertainty quantification remains optimal for decision-making now extended to the scale and speed of modern data using machine learning methods. <span class="citation" data-cites="murphy_probabilistic_2022 dew_probabilistic_2024">(<a href="#ref-murphy_probabilistic_2022" role="doc-biblioref">Murphy 2022</a>; <a href="#ref-dew_probabilistic_2024" role="doc-biblioref">Dew et al. 2024</a>)</span></p>
+<p>Since much of machine learning is atheoretic, part of the appeal of PML is to use Bayesian statistics as the principled foundation for employing machine learning methods as posterior approximations. Examples of PML include using variational inference to estimate mixed logit choice models.</p>
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-bissiri_general_2016" class="csl-entry" role="listitem">
+Bissiri, P. G., C. C. Holmes, and S. G. Walker. 2016. <span>“A <span>General</span> <span>Framework</span> for <span>Updating</span> <span>Belief</span> <span>Distributions</span>.”</span> <em>Journal of the Royal Statistical Society Series B: Statistical Methodology</em> 78 (5): 1103–30. <a href="https://doi.org/10.1111/rssb.12158">https://doi.org/10.1111/rssb.12158</a>.
+</div>
+<div id="ref-cranmer_frontier_2020" class="csl-entry" role="listitem">
+Cranmer, Kyle, Johann Brehmer, and Gilles Louppe. 2020. <span>“The Frontier of Simulation-Based Inference.”</span> <em>Proceedings of the National Academy of Sciences</em> 117 (48): 30055–62. <a href="https://doi.org/10.1073/pnas.1912789117">https://doi.org/10.1073/pnas.1912789117</a>.
+</div>
+<div id="ref-dew_probabilistic_2024" class="csl-entry" role="listitem">
+Dew, Ryan, Nicolas Padilla, Lan E. Luo, et al. 2024. <span>“Probabilistic <span>Machine</span> <span>Learning</span>: <span>New</span> <span>Frontiers</span> for <span>Modeling</span> <span>Consumers</span> and Their <span>Choices</span>.”</span> <em>International Journal of Research in Marketing</em>, November, S0167811624000995. <a href="https://doi.org/10.1016/j.ijresmar.2024.11.002">https://doi.org/10.1016/j.ijresmar.2024.11.002</a>.
+</div>
+<div id="ref-knoblauch_optimization-centric_nodate" class="csl-entry" role="listitem">
+Knoblauch, Jeremias, Jack Jewson, and Theodoros Damoulas. n.d. <em>An <span>Optimization</span>-Centric <span>View</span> on <span>Bayes</span>’ <span>Rule</span>: <span>Reviewing</span> and <span>Generalizing</span> <span>Variational</span> <span>Inference</span></em>.
+</div>
+<div id="ref-mclatchie_predictively_2026" class="csl-entry" role="listitem">
+McLatchie, Yann, Badr-Eddine Cherief-Abdellatif, David T. Frazier, and Jeremias Knoblauch. 2026. <em>Predictively <span>Oriented</span> <span>Posteriors</span></em>. arXiv. <a href="https://doi.org/10.48550/arXiv.2510.01915">https://doi.org/10.48550/arXiv.2510.01915</a>.
+</div>
+<div id="ref-murphy_probabilistic_2022" class="csl-entry" role="listitem">
+Murphy, Kevin P. 2022. <em>Probabilistic <span>Machine</span> <span>Learning</span>: <span>An</span> Introduction</em>. MIT Press. <a href="http://probml.github.io/book1">http://probml.github.io/book1</a>.
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
