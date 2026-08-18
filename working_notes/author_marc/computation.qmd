@@ -32,7 +32,7 @@ For this loss-based, generalized Bayesian inference there is a required hyperpar
 
 ## Martingale Posterior Distributions
 
-Ask for Sam Levy's presentation.
+See Sam Levy and Markus' presentations and Kevin Murphy's "Martingale Posterior Neural Networks for Fast Sequential Decision Making."
 
 - Builds on de Finetti and Doob
 - Similar to ABC but assumes a true unknown sampling distribution
