@@ -134,13 +134,33 @@ The canon is six short pieces that, read in sequence, lay out the paper's episte
 -   Hayek argues that any test of competition's effectiveness must compare it not against an unattainable ideal but against the alternatives we actually have. How does this argument bear on the paper's rejection of Arrow--Debreu/Muth--Radner as a *standard* against which real markets are judged deficient?
 -   Where does Hayek's argument require agents reasoning under *genuine* uncertainty? What would have to be true for the argument to survive a collapse of uncertainty into parametric risk? (Nothing, we think --- but the argument needs to be made carefully.)
 
+
+## Strongly Suggested Readings 
+
+* See @Boettke1998 for an essential statement about Misesian economic calculation the socialist calculation debate. 
+
+* See @HorwitzRAE2004 for a clear statement about what we mean by ***Misesian microfoundations***. 
+
+* The Introduction and Chapter 1 of @Horwitz2000 too! (see @Horwitz2020 for a very simple introduction to Austrian economics).
+
+* See @GiocoliJHBS2013 for a history of "Savage Bayesian" models in economics.
+
+* It was reading @KieferNyarko1995 and @BrayKreps1987 that made me think of "Bayesians in the catallaxy". 
+
+* One very simple way to imagine this project is to read @LachmannJEL1976 and imagine if he had chosen de Finetti rather than Shackle. 
+
 \clearpage
 
 ## Lane A --- Philosophical groundwork (Brittany Oakes & Michael Otteson)
 
 Brief: `notes/collaborator-briefs/brittany-michael-brief.qmd`. Your questions are A (mathematical social ontology of the price mechanism), B (temporal structure of catallactic action), C (causal-genetic structure and telos of exchange), D (the status of formalization).
 
-*Lane A readings will be added incrementally.*
+- @BorrillTesfatsionECREM2011 discuss constructive maths in ace models and social science more generally
+  - I think the relationship between constructive maths and social ontology will be prove to be a very important link
+
+- @HarperJIE2010 is an important source! 
+  - He may take on too many arguments that we do not want to touch, but he is unique in pointing out the social ontology of number question in a market setting.
+  - The core philosophical issue is the reality of price (a cardinal) number as a socially coordintating process
 
 \clearpage
 
@@ -148,7 +168,22 @@ Brief: `notes/collaborator-briefs/brittany-michael-brief.qmd`. Your questions ar
 
 Brief: `notes/collaborator-briefs/erin-emmy-brief.qmd`. The questions are A (formalizing the Misesian-appraisement / de Finettian-prevision bridge), B (exchangeability as the formal expression of the Hayekian epistemic condition), C (endogenous stochasticity and interacting subjective Bayesians), D (exchangeable search and the option/search isomorphism), E (existing-vs-new math accounting).
 
-*Lane B readings will be added incrementally.*
+
+* I believe @HarperJIE2010 may prove helpful in establishing the mathematical foundations of the de Finetti-meets-Mises problem. We can ignore philosophical battles that he picks that we don't wish to fight ourselves.
+
+* @Lad1996 Perhaps Uncle Frank will still be of service?
+
+* @BorrillTesfatsionECREM2011 focus on constructive mathematics. Probably, this is a rich ground for determining the missing mathematical foundations assumed by Misesian economic calculation and the Hayekian price mechanism.
+  - This suggests looking to discrete maths and data structures and algorithms from computer science as hints.
+
+* @McCallMcCall2014 is the one textbook on search theory by its originator (at the sequential form).
+  - McCall was the first to suggest "exchangeable search"
+  - This history, mathematics, and economics in this book is the foundation for Emmy's thesis.
+  - Volume II was never written. What are the missing foundations?
+
+* @High1990 is the starting place for Emmy's thesis. The project on "exchangeable search" picks up where High left off with one key insight: search theory and market process theory belong together once de Finetti is embraced.    
+
+* @Thomsen1992 is somewhat similar to @High1990 but focuses more on rational expectations rather than search. 
 
 \clearpage
 
@@ -156,7 +191,136 @@ Brief: `notes/collaborator-briefs/erin-emmy-brief.qmd`. The questions are A (for
 
 Brief: `notes/collaborator-briefs/jake-marc-brief.qmd`. The questions are A (read and summarize the literature), B (reframe ACE as already on the way to CSC), C (Bayesian agent-based models --- Marc's anchor), D (computational and signals-processing infrastructure --- Jake's anchor), E (strengthen the options-markets proof-of-concept).
 
-*Lane C readings will be added incrementally.*
+
+### On *Brock-Style* Models
+
+The following quote is from @BrockdeLima1996:
+
+> *"We shall devote part of this article to an argument for a style of research in statistical finance where models inspired by direct theoretical arguments are estimated by computer assisted methods such as MSM and where model adequacy (specification testing) is done by bootstrapping financially relevant quantities under the null. That is to say, the quantities that are inputted into the specification tests are themselves motivated by the type of economic and financial behavior one is trying to study. For example, distributions of statistics gleaned off of trading strategies are bootstrapped under the null model being tested in Brock, Lakonishok, LeBaron (1992), and Levich and Thomas (1993)."* 
+
+A few notes:
+
+* This quote provides a frame for how to think about "agent-based models."
+
+* This is somewhat different from what are known as *ace* (for "agent-basec computational economic") models in the exisiting literature. 
+
+* Often existing ace models as such are not explicitly built upon the underlying statistical decision problem of the agent(s).
+
+* Often agent behavior is rather *ad hoc* (see ***the Durlauf critique***) 
+
+* MSM (method of simulated moments) is an example of [***indirect inference***](https://en.wikipedia.org/wiki/Indirect_inference) which in turn is a kind of frequentist ABC without the prior.
+  - Is typically understood that ABC comes out of biology and genetic models
+  - Indirect inference was developed in econometrics 
+
+* @BrockEtAl1992 (BLL) is an early powerful example. 
+
+* @FiglewskiJF1989 is the prime example and the one we will be building directly upon. 
+  - Figlewski reaches for Monte Carlo out of convenience. He is not thinking of inventing a new methodology. 
+  - It is obviously an example of what Brock & de Lima are writing about though. 
+  - His agent might should be called "a frequentist in a rational expectations equilibrium" 
+  - We want to imagine the options market-maker as a Misesian entrepreneur and a de Finettian statistical decision maker (i.e. a "Bayesian in the catallaxy")
+
+* See also @SullivanTimmermannWhiteJF1999 for an example with the "bootstrap data snooper"
+  - They introduce more statistical sophistication relative to BLL 
+  - Is explicitly decision theoretic (they use the $ln{(\cdot)}$ loss function or scoring rule
+  - Their analysis comes very close to a frequentist version of the ***evaluation game*** 
+  - Their use of the stationary bootstrap avoids strong assumptions of the likelihood function which plague asset pricing studies. It is based upon an argument of exchangeability. I don't believe it is necessary to interpret it as objective/relative frequentist. 
+  - This comes very close to @Geweke2010, @GewekeAmisanoJAE2011, and @HillET1994.
+  - It is an important starting place for the evaluation game study that comes next for us.
+
+* See also @ElliottTimmermann2016
+
+
+### On Agent-Based Computational Economic Models 
+
+* @DelliGattiEtAl2018 is a practical textbook approach to ace models from a more macroeconomic orientation. Lots to learn from here. And this is the benchmark for standard ace models. 
+
+* @TesfatsionJEM2017 is an important reference for ace models. 
+  - She ties ace models to extensive form games. 
+  - She states that ace is a method and not a theory.
+  - Pay careful attention to her discussion of stochasticity (we will replace with "endogenous stochasticity")
+
+* @BorrillTesfatsionECREM2011 discuss the role of constructive maths in ace model context
+
+
+### The Durlauf Critique
+
+@DurlaufTEJ2005 provides an important critique of ace models under the heading of "complexity economics"
+
+The following quote from Durlauf is a stinging critique of the behavioral assumptions of typical ace models: 
+
+> *"The weaknesses of the behavioural assumptions that underlie complex systems models of economic phenomena are particularly apparent in the context of financial markets models. Many such models, a good example of which is Lux and Marchesi (1999), have been constructed to produce fat-tailed distributions in returns and long memory in volatility, two features whose empirical salience LeBaron (2001) has questioned; a similar exercise is developed in Farmer and Joshi (2002). Regardless of whether these properties are or are not present in financial data,* ***a common problem with these sorts of models is that their logic does not embody what I believe are fundamental features of financial markets. In particular, these models often fail to embody behavioural assumptions that ensure the nonexistence of arbitrage opportunities.*** *In my view, no arbitrage constitutes the most fundamental empirical feature of asset markets and so is properly a building block of the modern theory of finance. The standard theory of finance has little to say about fat tails and long memory in volatility; the theory is not inconsistent with these features but rather does not provide any insight as to why they might occur. A successful advance of the current theory of finance should therefore show how to augment a model that reflects no arbitrage in ways that explains these additional features. Instead, behaviour that will eliminate arbitrage opportunities is often not built into these models and presence or absence of arbitrage opportunities is given inadequate attention in the analysis of equilibrium asset returns produced by the model. It is not an advance, in my view, to specify an environment in which arbitrage opportunities go unexploited; it is simply bad microeconomics."*
+
+A few notes: 
+
+* I agree with Durlauf that ace models that do not model arbitrage represent "bad microeconomics"
+
+* But his critque cuts two ways! Notice how easily he slips from "arbitrage" to "no-arbitrage". 
+
+* This is an example of what @BuchananSEJ1964 means about "crossing the bridge" between the individual and the collective. 
+
+* Durluaf's critique applies with full force to rational expectations and Nash equilibrium models in market microstruture which have to invent [***noise traders***](https://www.investopedia.com/terms/n/noisetrader.asp) to generate any trading volume in their models at all.
+
+* Actual arbitrage behavior is mostly missing in financial market models.
+
+* Although see @FiglewskiJF1989 and @FiglewskiJFM2017 who clearly understands options market-making as arbitrage. This is a key insight!  
+
+* See @Fisher1983 (esp Chapter 4) on why arbitrage requires ***disequilibrium awareness***
+
+* The latter is something financial economists, macroeconomists, and game theorists have not been able to deal with at all
+
+* The result is the [***no-trade theorems***](https://en.wikipedia.org/wiki/No-trade_theorem). See also @SerranoPadial2018. 
+
+* This is a real issue that CSC seeks to address head on. 
+
+
+### On Austrian Economics and ACE Models 
+
+- See @AxtellAAE2017 
+
+- See @BoettkeVeetil2016 (this relates to "endogenous stochasticity")
+
+- See @VriendSEJ2002 for an argument that Hayek would have been an "ace" had such tools been available to him. 
+
+- See @DevereauxWagner2018 for a similar argument for Buchanan.
+
+
+### A starter reading list --- estimation of agent-based models (Marc, question C)
+
+The discussion above is about *which* models we care about and *why*; this list gathers the concrete papers on *how* such models are taken to data --- the methods lane behind the MSM / indirect-inference remarks above. The arc to read for is the move from *calibration* to *estimation* to *Bayesian estimation*: exactly the path from ACE toward CSC. All are on the shared Box drive (paired with their `.bib` entries under `readings/ace/`).
+
+**Heterogeneous-beliefs / adaptive ABM asset pricing** --- the structural core: boundedly rational agents switching between competing predictors, producing endogenous fluctuations without exogenous shocks.
+
+-   Brock, W. A. (1993). "Pathways to Randomness in the Economy: Emergent Nonlinearity and Chaos in Economics and Finance." *Estudios Económicos* 8(1): 3--55. [@BrockEE1993]
+-   Brock, W. A., & Hommes, C. H. (1998). "Heterogeneous Beliefs and Routes to Chaos in a Simple Asset Pricing Model." *Journal of Economic Dynamics and Control* 22(8--9): 1235--1274. [@BrockHommesJEDC1998]
+-   Brock, W. A. (2000). "Whither Nonlinear?" *Journal of Economic Dynamics and Control* 24(5--7): 663--678. [@BrockJEDC2000]
+-   Woodford, M. (2000). "An Interview with William A. Brock." *Macroeconomic Dynamics* 4(1): 108--138. [@WoodfordMD2000] (Orientation to the program, not the technique.)
+
+**Discrete choice with social interactions** --- the bridge from the asset-pricing models to mainstream microeconometrics: the "intensity of choice" logit is a discrete-choice model with interaction effects, which is where Marc's Bayesian discrete-choice toolkit attaches.
+
+-   Brock, W. A., & Durlauf, S. N. (2001). "Discrete Choice with Social Interactions." *Review of Economic Studies* 68(2): 235--260. [@BrockDurlaufRES2001]
+-   Brock, W. A., & Durlauf, S. N. (2001). "Interactions-Based Models." In *Handbook of Econometrics*, vol. 5, ch. 54, pp. 3297--3380. Elsevier. [@BrockDurlauf2001]
+-   Anderson, S. P., de Palma, A., & Thisse, J.-F. (1992). *Discrete Choice Theory of Product Differentiation*. MIT Press. [@AndersonEtAl1992]
+
+**Simulation-, moment-, and Bayesian-based estimation** --- read in order: the moment-matching origins, the heuristic-optimization objective-function work, then the explicitly Bayesian treatments (Marc's anchor).
+
+-   Duffie, D., & Singleton, K. J. (1993). "Simulated Moments Estimation of Markov Models of Asset Prices." *Econometrica* 61(4): 929--952. [@DuffieSingletonECTA1993]
+-   Lee, B.-S., & Ingram, B. F. (1991). "Simulation Estimation of Time-Series Models." *Journal of Econometrics* 47(2--3): 197--205. [@LeeIngramJECM1991]
+-   Gilli, M., & Winker, P. (2003). "A Global Optimization Heuristic for Estimating Agent Based Models." *Computational Statistics & Data Analysis* 42(3): 299--312. [@GilliWinkerCSDA2003]
+-   Winker, P., Gilli, M., & Jeleskovic, V. (2007). "An Objective Function for Simulation Based Inference on Exchange Rate Data." *Journal of Economic Interaction and Coordination* 2(2): 125--145. [@WinkerEtAlJEIC2007]
+-   Franke, R. (2009). "Applying the Method of Simulated Moments to Estimate a Small Agent-Based Asset Pricing Model." *Journal of Empirical Finance* 16(5): 804--815. [@FrankeJEF2009]
+-   Franke, R., & Westerhoff, F. (2012). "Structural Stochastic Volatility in Asset Pricing Dynamics: Estimation and Model Contest." *Journal of Economic Dynamics and Control* 36(8): 1193--1211. [@FrankeWesterhoffJEDC2012]
+-   Recchioni, M. C., Tedeschi, G., & Gallegati, M. (2015). "A Calibration Procedure for Analyzing Stock Price Dynamics in an Agent-Based Framework." *Journal of Economic Dynamics and Control* 60: 1--25. [@RecchioniEtAlJEDC2015]
+-   Grazzini, J., Richiardi, M. G., & Tsionas, M. (2017). "Bayesian Estimation of Agent-Based Models." *Journal of Economic Dynamics and Control* 77: 26--47. [@GrazziniEtAlJEDC2017] (Marc's anchor --- the explicitly Bayesian treatment.)
+-   Tubbenhauer, T., Fieberg, C., & Poddig, T. (2021). "Multi-Agent-Based VaR Forecasting." *Journal of Economic Dynamics and Control* 131: 104231. [@TubbenhauerEtAlJEDC2021]
+
+**Methods references** --- standing references for the discrete-choice and Bayesian-simulation machinery; consult rather than read cover to cover.
+
+-   Cameron, A. C., & Trivedi, P. K. (2005). *Microeconometrics: Methods and Applications*. Cambridge University Press. [@CameronTrivedi2005]
+-   Train, K. E. (2009). *Discrete Choice Methods with Simulation* (2nd ed.). Cambridge University Press. [@Train2009]
+-   Rossi, P. E., Allenby, G. M., & McCulloch, R. (2005). *Bayesian Statistics and Marketing*. John Wiley & Sons. [@RossiAllenbyMcCulloch2005] (Marc's home toolkit for Bayesian discrete choice.)
+
+
 
 \clearpage
 
